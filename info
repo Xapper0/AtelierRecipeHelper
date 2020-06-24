@@ -1,0 +1,49 @@
+str_item_ files define English translations
+
+<FieldData tag="ITEM_MIX_BAKU_UNI"> 
+    0 <Ring elem="2" type="0" restrict="0"> type is the effect number (starting from 0), type 4 = ?, type 5 = traits, type 6 = recipe
+        <Child indexes="-1,1,-1,-1,-1,2," />  Children start count from 0, -1 means no child in position, not -1 means the index for the ring is a child
+        <Param v0="0" v1="1" e0="3" e1="5" /> e[num] means the values needed to unlock the effect
+    </Ring>
+    1 <Ring elem="0" type="1" restrict="1" x="1" y="-1"> restrict is the type of item
+        <Child indexes="15,3,-1,8,-1,-1," />
+        <Connect idx="0" dir="4" /> connect draws lines: idx is the index of origin and dir is the direction to draw from (starting with 0 at the top, going clockwise)
+        <Param v0="0" v1="1" e0="1" e1="2" />
+    </Ring>
+    2 <Ring elem="0" type="2" restrict="2" x="-1" y="-1">
+        <Child indexes="-1,-1,-1,14,-1,4," />
+        <Connect idx="0" dir="2" />
+        <Param v0="0" v1="1" e0="1" e1="2" />
+    </Ring>
+    3 <Ring elem="1" type="1" restrict="0" x="2" y="-2">
+        <Connect idx="1" val="3" elem="0" dir="4" /> val and elem are the requirements for the ring to be unlocked
+        <Param v0="2" e0="4" /> v0 is where the effect strength picks up from
+    </Ring>
+    4 <Ring elem="3" type="2" restrict="1" x="-2" y="-2">
+      <Connect idx="2" val="3" elem="0" dir="2" />
+      <Param v0="2" e0="2" />
+    </Ring>
+    5 <Ring elem="2" type="4" restrict="0"> Isn't used?
+        <Connect val="3" elem="0" dir="4" />
+        <Param v0="10" v1="15" v2="20" e0="2" e1="3" e2="4" />
+    </Ring>
+    6 <Ring />
+    7 <Ring />
+    8 <Ring elem="0" type="5" restrict="2" x="1" y="1">
+        <Connect idx="1" />
+        <Param v0="1" v1="2" v2="3" e0="1" e1="2" e2="3" />
+    </Ring>
+    9 <Ring />
+    10<Ring />
+    11<Ring />
+    12<Ring />
+    13<Ring />
+    14<Ring elem="1" type="6" ex_material="ITEM_MIX_MATERIAL_NEUTRALIZE_002" x="-1" y="1">
+        <Connect idx="2" val="1" elem="3" />
+        <Param v0="ITEM_RECIPE_ITEM_MIX_ICE_THORN" e0="2" />
+    </Ring>
+    15<Ring elem="0" type="6" ex_material="ITEM_MIX_MATERIAL_NEUTRALIZE_001" x="1" y="-3">
+        <Connect idx="1" val="2" elem="0" dir="3" />
+        <Param v0="ITEM_RECIPE_ITEM_MIX_CRAFT" e0="2" />
+    </Ring>
+  </FieldData>

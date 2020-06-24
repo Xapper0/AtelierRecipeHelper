@@ -1,0 +1,77 @@
+import csv
+import sys
+import xml.etree.ElementTree as ET
+import glob
+from enum import Enum
+
+STRING_ID = "String_No"
+TRANSLATION = "Text"
+
+class ryzaEnumStarters(Enum):
+    MATERIAL = "ITEM_MAT"
+    MIX = "ITEM_MIX"
+    WEAPON = "ITEM_WEAPON"
+    ARMOUR = "ITEM_ARMOR"
+    ACCESSORY = "ITEM_ACCESSORY"
+    KEY = "ITEM_KEY"
+    CATEGORY = "ITEM_CATEGORY"
+    EFFECT = "ITEM_EFF"
+    TRAIT = "ITEM_POTENTIAL"
+
+def joinXMLToCSV(pathPattern, writePath):
+    with open(writePath, mode="w") as writeFile:
+        writer = csv.writer(writeFile, lineterminator="\n")
+        for path in glob.glob(pathPattern):
+            tree = ET.parse(path)
+            root = tree.getroot()
+            for item in root:
+                row = []
+                row.append((item.find(".").attrib[STRING_ID]).encode("ascii", errors="ignore").decode())
+                row.append((item.find(".").attrib[TRANSLATION]).encode("ascii", errors="ignore").decode())
+                writer.writerow(row)
+
+
+def nameToID(enumsPath, translatedPath, writePath):
+    # Creating dictionary
+    translationDictionary = {}
+    usedDictionary = {}
+
+    with open(translatedPath) as translatedFile:
+        translated = csv.reader(translatedFile)
+        for row in translated:
+            translationDictionary[row[1].encode("ascii", errors="ignore").decode()] = row[0]
+
+    with open(enumsPath) as enumsFile, open(writePath, mode="w") as writeFile:
+        reader = csv.reader(enumsFile)
+        writer = csv.writer(writeFile, lineterminator="\n")
+        for row in reader:
+            if row[1] == "":
+                continue
+            
+            row[1] = row[1].encode("ascii", errors="ignore").decode()
+            if row[1] in translationDictionary:
+                row[1] = translationDictionary.pop(row[1])
+                usedDictionary[row[1]] = row[0]
+                writer.writerow(row)
+            elif row[1] in usedDictionary:
+                print(row, "is already used by", usedDictionary[row[1]])
+            else:
+                print(row, "is not in the translation dictionary")
+
+    print("Unused translations: ", translationDictionary)
+
+def stripEnum(readPath, writePath, enumStarter):
+    with open(readPath) as readFile, open(writePath, mode="w") as writeFile:
+        reader = csv.reader(readFile)
+        writer = csv.writer(writeFile, lineterminator="\n")
+        for row in reader:
+            if row[0].startswith(enumStarter) and row[1]:
+                writer.writerow(row)
+
+if __name__ == "__main__":
+    # for name, member in ryzaEnumStarters.__members__.items():
+    #     stripEnum(sys.argv[1], sys.argv[2] + member.value, member.value)
+    # stripEnum(sys.argv[1], sys.argv[2], ryzaEnumStarters.EFFECT.value)
+    # nameToID("data/item_eff_enums.csv", "data/str_item_effect.xml", "data/item_eff_id_enums.csv")
+    joinXMLToCSV("data/str_item*.xml", "data/str_item.csv")
+    nameToID("data/ryza_enums.csv", "data/str_item.csv", "test")
