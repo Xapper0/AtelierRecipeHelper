@@ -74,4 +74,4 @@ if __name__ == "__main__":
     # stripEnum(sys.argv[1], sys.argv[2], ryzaEnumStarters.EFFECT.value)
     # nameToID("data/item_eff_enums.csv", "data/str_item_effect.xml", "data/item_eff_id_enums.csv")
     joinXMLToCSV("data/str_item*.xml", "data/str_item.csv")
-    nameToID("data/ryza_enums.csv", "data/str_item.csv", "test")
+    # nameToID("data/ryza_enums.csv", "data/str_item.csv", "test")

@@ -54,16 +54,9 @@ def testIDs(enumsPath, translatedPath):
             if row[1] == "":
                 continue
             
-            # row[1] = row[1].encode("ascii", errors="ignore").decode()
             if row[2] in translationDictionary and row[1] != translationDictionary.get(row[2]):
                 print(row, "Does not have the right id", translationDictionary.get(row[0]))
-
-            # if row[1] in translationDictionary:
-            #     row[1] = translationDictionary.get(row[1])
-            #     usedDictionary[row[1]] = row[0]
-            #     writer.writerow(row)
-            # else:
-            #     print(row, "not found")
+                
 
 if __name__ == "__main__":
     applyID(6750209, "data/ryza_enums.csv")

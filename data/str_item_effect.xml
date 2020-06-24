@@ -1,0 +1,947 @@
+﻿<?xml version="1.0"?>
+<Root>
+	<str String_No="6881281" Text="Burst"/>
+	<str String_No="6881282" Text="Scatter"/>
+	<str String_No="6881283" Text="Explosive"/>
+	<str String_No="6881284" Text="Cold Pain"/>
+	<str String_No="6881285" Text="Stinging Pain"/>
+	<str String_No="6881286" Text="Freezing Pain"/>
+	<str String_No="6881287" Text="Physical Damage XS"/>
+	<str String_No="6881288" Text="Physical Damage S"/>
+	<str String_No="6881289" Text="Physical Damage M"/>
+	<str String_No="6881290" Text="Physical Damage L"/>
+	<str String_No="6881291" Text="Fire Damage XS"/>
+	<str String_No="6881292" Text="Fire Damage S"/>
+	<str String_No="6881293" Text="Fire Damage M"/>
+	<str String_No="6881294" Text="Fire Damage L"/>
+	<str String_No="6881295" Text="Fire Damage XL"/>
+	<str String_No="6881296" Text="Crimson Fire"/>
+	<str String_No="6881297" Text="Searing Petal"/>
+	<str String_No="6881298" Text="Ice Damage XS"/>
+	<str String_No="6881299" Text="Ice Damage S"/>
+	<str String_No="6881300" Text="Ice Damage M"/>
+	<str String_No="6881301" Text="Ice Damage L"/>
+	<str String_No="6881302" Text="Ice Damage XL"/>
+	<str String_No="6881303" Text="Embracing Ice"/>
+	<str String_No="6881304" Text="Freezing Waltz"/>
+	<str String_No="6881305" Text="Lightning Damage XS"/>
+	<str String_No="6881306" Text="Lightning Damage S"/>
+	<str String_No="6881307" Text="Lightning Damage M"/>
+	<str String_No="6881308" Text="Lightning Damage L"/>
+	<str String_No="6881309" Text="Lightning Damage XL"/>
+	<str String_No="6881310" Text="Electrified Flash"/>
+	<str String_No="6881311" Text="Super Vibration Laser"/>
+	<str String_No="6881312" Text="Wind Damage XS"/>
+	<str String_No="6881313" Text="Wind Damage S"/>
+	<str String_No="6881314" Text="Wind Damage M"/>
+	<str String_No="6881315" Text="Wind Damage L"/>
+	<str String_No="6881316" Text="Wind Damage XL"/>
+	<str String_No="6881317" Text="Gust Fang"/>
+	<str String_No="6881318" Text="Divine Whirl"/>
+	<str String_No="6881319" Text="Roaring Ice Blade"/>
+	<str String_No="6881320" Text="Dancing Ice Blade"/>
+	<str String_No="6881321" Text="Scornful Ice Blade"/>
+	<str String_No="6881322" Text="Bloody Ice Blade"/>
+	<str String_No="6881323" Text="Booming Order"/>
+	<str String_No="6881324" Text="Thundering Order"/>
+	<str String_No="6881325" Text="Summon Lightning"/>
+	<str String_No="6881326" Text="Summon Thunderbolt"/>
+	<str String_No="6881327" Text="Bubble Bullet"/>
+	<str String_No="6881328" Text="Balloon Bullet"/>
+	<str String_No="6881329" Text="Grenade"/>
+	<str String_No="6881330" Text="Quaking Cannon"/>
+	<str String_No="6881331" Text="Fireball Call"/>
+	<str String_No="6881332" Text="Fire Orb Call"/>
+	<str String_No="6881333" Text="Meteor Call"/>
+	<str String_No="6881334" Text="Rock Crusher"/>
+	<str String_No="6881335" Text="Mountain Crusher"/>
+	<str String_No="6881336" Text="Continental Crusher"/>
+	<str String_No="6881337" Text="Storm Emblem"/>
+	<str String_No="6881338" Text="Hurricane Emblem"/>
+	<str String_No="6881339" Text="Destruction Emblem"/>
+	<str String_No="6881340" Text="Crescent Moon Light"/>
+	<str String_No="6881341" Text="Full Moon Light"/>
+	<str String_No="6881342" Text="New Moon Light"/>
+	<str String_No="6881343" Text="Lava Vessel"/>
+	<str String_No="6881344" Text="Earth Vessel"/>
+	<str String_No="6881345" Text="Sun Vessel"/>
+	<str String_No="6881346" Text="The Color of Proof"/>
+	<str String_No="6881347" Text="The Secret of Lies"/>
+	<str String_No="6881348" Text="The Circle of Truth"/>
+	<str String_No="6881349" Text="The Heart of Proof"/>
+	<str String_No="6881350" Text="The Light of Lies"/>
+	<str String_No="6881351" Text="The Axis of Truth"/>
+	<str String_No="6881352" Text="Flame Dance"/>
+	<str String_No="6881353" Text="Phantom Rage"/>
+	<str String_No="6881354" Text="Earthly Rage"/>
+	<str String_No="6881355" Text="Gaia's Rage"/>
+	<str String_No="6881356" Text="Divine Rage"/>
+	<str String_No="6881382" Text="Uni Spike S"/>
+	<str String_No="6881383" Text="Uni Spike M"/>
+	<str String_No="6881384" Text="Uni Spike L"/>
+	<str String_No="6881385" Text="Surprise! S"/>
+	<str String_No="6881386" Text="Surprise! M"/>
+	<str String_No="6881387" Text="Surprise! L"/>
+	<str String_No="6881388" Text="Fear S"/>
+	<str String_No="6881389" Text="Fear M"/>
+	<str String_No="6881390" Text="Fear L"/>
+	<str String_No="6881391" Text="Fading Strength S"/>
+	<str String_No="6881392" Text="Fading Strength M"/>
+	<str String_No="6881393" Text="Fading Strength L"/>
+	<str String_No="6881394" Text="Exploding Spikes S"/>
+	<str String_No="6881395" Text="Exploding Spikes M"/>
+	<str String_No="6881396" Text="Exploding Spikes L"/>
+	<str String_No="6881397" Text="Lowered Guard S"/>
+	<str String_No="6881398" Text="Lowered Guard M"/>
+	<str String_No="6881399" Text="Lowered Guard L"/>
+	<str String_No="6881400" Text="Slowdown S"/>
+	<str String_No="6881401" Text="Slowdown M"/>
+	<str String_No="6881402" Text="Slowdown L"/>
+	<str String_No="6881403" Text="Senselessness S"/>
+	<str String_No="6881404" Text="Senselessness M"/>
+	<str String_No="6881405" Text="Senselessness L"/>
+	<str String_No="6881406" Text="Penetration S"/>
+	<str String_No="6881407" Text="Penetration M"/>
+	<str String_No="6881408" Text="Penetration L"/>
+	<str String_No="6881409" Text="Blowback S"/>
+	<str String_No="6881410" Text="Blowback M"/>
+	<str String_No="6881411" Text="Blowback L"/>
+	<str String_No="6881412" Text="Reinforcing Wind"/>
+	<str String_No="6881413" Text="Sandblast S"/>
+	<str String_No="6881414" Text="Sandblast M"/>
+	<str String_No="6881415" Text="Sandblast L"/>
+	<str String_No="6881416" Text="Sharp Edge S"/>
+	<str String_No="6881417" Text="Sharp Edge M"/>
+	<str String_No="6881418" Text="Sharp Edge L"/>
+	<str String_No="6881419" Text="Thunder Current S"/>
+	<str String_No="6881420" Text="Thunder Current M"/>
+	<str String_No="6881421" Text="Thunder Current L"/>
+	<str String_No="6881422" Text="Thunderclap S"/>
+	<str String_No="6881423" Text="Thunderclap M"/>
+	<str String_No="6881424" Text="Thunderclap L"/>
+	<str String_No="6881425" Text="Multi-Order"/>
+	<str String_No="6881426" Text="Sticky Goo S"/>
+	<str String_No="6881427" Text="Sticky Goo M"/>
+	<str String_No="6881428" Text="Sticky Goo L"/>
+	<str String_No="6881429" Text="Bubbly Prison S"/>
+	<str String_No="6881430" Text="Bubbly Prison M"/>
+	<str String_No="6881431" Text="Bubbly Prison L"/>
+	<str String_No="6881432" Text="Incinerating Flame S"/>
+	<str String_No="6881433" Text="Incinerating Flame M"/>
+	<str String_No="6881434" Text="Incinerating Flame L"/>
+	<str String_No="6881435" Text="Scorching Garland S"/>
+	<str String_No="6881436" Text="Scorching Garland L"/>
+	<str String_No="6881437" Text="Inferno Garland"/>
+	<str String_No="6881438" Text="Ice Panier S"/>
+	<str String_No="6881439" Text="Ice Panier L"/>
+	<str String_No="6881440" Text="Imperial Line"/>
+	<str String_No="6881441" Text="Super Focus S"/>
+	<str String_No="6881442" Text="Super Focus L"/>
+	<str String_No="6881443" Text="Super Discharge"/>
+	<str String_No="6881444" Text="Maelstrom"/>
+	<str String_No="6881445" Text="Dancing Darkness S"/>
+	<str String_No="6881446" Text="Dancing Darkness M"/>
+	<str String_No="6881447" Text="Dancing Darkness L"/>
+	<str String_No="6881448" Text="Heatwave S"/>
+	<str String_No="6881449" Text="Heatwave M"/>
+	<str String_No="6881450" Text="Heatwave L"/>
+	<str String_No="6881451" Text="Fire Membrane S"/>
+	<str String_No="6881452" Text="Fire Membrane M"/>
+	<str String_No="6881453" Text="Fire Membrane L"/>
+	<str String_No="6881454" Text="Earthquake S"/>
+	<str String_No="6881455" Text="Earthquake M"/>
+	<str String_No="6881456" Text="Earthquake L"/>
+	<str String_No="6881457" Text="Echoing Seas S"/>
+	<str String_No="6881458" Text="Echoing Seas M"/>
+	<str String_No="6881459" Text="Echoing Seas L"/>
+	<str String_No="6881460" Text="Colossal Hammer"/>
+	<str String_No="6881461" Text="Slicer S"/>
+	<str String_No="6881462" Text="Slicer M"/>
+	<str String_No="6881463" Text="Slicer L"/>
+	<str String_No="6881464" Text="Stagnant Sky S"/>
+	<str String_No="6881465" Text="Stagnant Sky M"/>
+	<str String_No="6881466" Text="Stagnant Sky L"/>
+	<str String_No="6881467" Text="Painted Finale"/>
+	<str String_No="6881468" Text="Twilight Invitation S"/>
+	<str String_No="6881469" Text="Twilight Invitation M"/>
+	<str String_No="6881470" Text="Twilight Invitation L"/>
+	<str String_No="6881471" Text="Hazy Outline S"/>
+	<str String_No="6881472" Text="Hazy Outline M"/>
+	<str String_No="6881473" Text="Hazy Outline L"/>
+	<str String_No="6881474" Text="Glowing Red Night"/>
+	<str String_No="6881475" Text="Dissolving Heat S"/>
+	<str String_No="6881476" Text="Dissolving Heat M"/>
+	<str String_No="6881477" Text="Dissolving Heat L"/>
+	<str String_No="6881478" Text="Shivering Fear S"/>
+	<str String_No="6881479" Text="Shivering Fear M"/>
+	<str String_No="6881480" Text="Shivering Fear L"/>
+	<str String_No="6881481" Text="Lava Glare"/>
+	<str String_No="6881482" Text="Vampiric Story"/>
+	<str String_No="6881483" Text="Vampiric Epic"/>
+	<str String_No="6881484" Text="Skyline"/>
+	<str String_No="6881485" Text="Landscape"/>
+	<str String_No="6881486" Text="Portrait of a Sage"/>
+	<str String_No="6881487" Text="Roaring Ring S"/>
+	<str String_No="6881488" Text="Roaring Ring M"/>
+	<str String_No="6881489" Text="Roaring Ring L"/>
+	<str String_No="6881490" Text="Directional Explosive S"/>
+	<str String_No="6881491" Text="Directional Explosive M"/>
+	<str String_No="6881492" Text="Directional Explosive L"/>
+	<str String_No="6881493" Text="Raining Flame S"/>
+	<str String_No="6881494" Text="Raining Flame M"/>
+	<str String_No="6881495" Text="Raining Flame L"/>
+	<str String_No="6881496" Text="Chain of Hatred S"/>
+	<str String_No="6881497" Text="Chain of Hatred M"/>
+	<str String_No="6881498" Text="Chain of Hatred L"/>
+	<str String_No="6881502" Text="Raining Despair S"/>
+	<str String_No="6881503" Text="Raining Despair M"/>
+	<str String_No="6881504" Text="Raining Despair L"/>
+	<str String_No="6881517" Text="HP Gain XS"/>
+	<str String_No="6881518" Text="HP Gain S"/>
+	<str String_No="6881519" Text="HP Gain M"/>
+	<str String_No="6881520" Text="HP Gain L"/>
+	<str String_No="6881521" Text="HP Gain XL"/>
+	<str String_No="6881522" Text="AP Gain S"/>
+	<str String_No="6881523" Text="AP Gain M"/>
+	<str String_No="6881524" Text="AP Gain L"/>
+	<str String_No="6881525" Text="KO Recovery XS"/>
+	<str String_No="6881526" Text="KO Recovery S"/>
+	<str String_No="6881527" Text="KO Recovery M"/>
+	<str String_No="6881528" Text="KO Recovery L"/>
+	<str String_No="6881529" Text="KO Recovery XL"/>
+	<str String_No="6881530" Text="Fractional HP Gain XS"/>
+	<str String_No="6881531" Text="Fractional HP Gain S"/>
+	<str String_No="6881532" Text="Fractional HP Gain M"/>
+	<str String_No="6881533" Text="Fractional HP Gain L"/>
+	<str String_No="6881534" Text="Fractional HP Gain XL"/>
+	<str String_No="6881535" Text="HP Regen XS"/>
+	<str String_No="6881536" Text="HP Regen S"/>
+	<str String_No="6881537" Text="HP Regen M"/>
+	<str String_No="6881538" Text="HP Regen L"/>
+	<str String_No="6881539" Text="HP Regen XL"/>
+	<str String_No="6881540" Text="Stun Gauge Recovery XS"/>
+	<str String_No="6881541" Text="Stun Gauge Recovery S"/>
+	<str String_No="6881542" Text="Stun Gauge Recovery M"/>
+	<str String_No="6881543" Text="Stun Gauge Recovery L"/>
+	<str String_No="6881544" Text="Stun Gauge Recovery XL"/>
+	<str String_No="6881545" Text="Stun Recovery"/>
+	<str String_No="6881546" Text="Remove Ailments"/>
+	<str String_No="6881547" Text="Remove Debuffs"/>
+	<str String_No="6881548" Text="Sleep Cure"/>
+	<str String_No="6881549" Text="Poison Cure"/>
+	<str String_No="6881550" Text="Envenom Cure"/>
+	<str String_No="6881551" Text="Burn Cure"/>
+	<str String_No="6881552" Text="Frostbite Cure"/>
+	<str String_No="6881553" Text="Blind Cure"/>
+	<str String_No="6881554" Text="Seal Cure"/>
+	<str String_No="6881555" Text="Slow Cure"/>
+	<str String_No="6881556" Text="Curse Cure"/>
+	<str String_No="6881557" Text="Immobilize Cure"/>
+	<str String_No="6881558" Text="Paralyze Cure"/>
+	<str String_No="6881559" Text="Thorn Cure"/>
+	<str String_No="6881560" Text="Healing Taste XS"/>
+	<str String_No="6881561" Text="Healing Taste S"/>
+	<str String_No="6881562" Text="Healing Taste M"/>
+	<str String_No="6881563" Text="Healing Taste L"/>
+	<str String_No="6881564" Text="Healing Taste XL"/>
+	<str String_No="6881565" Text="Soft Texture"/>
+	<str String_No="6881566" Text="Gentle Texture"/>
+	<str String_No="6881567" Text="Lovely Texture"/>
+	<str String_No="6881568" Text="Forest Stream S"/>
+	<str String_No="6881569" Text="Forest Stream M"/>
+	<str String_No="6881570" Text="Forest Stream L"/>
+	<str String_No="6881571" Text="Dancing Dust S"/>
+	<str String_No="6881572" Text="Dancing Dust M"/>
+	<str String_No="6881573" Text="Dancing Dust L"/>
+	<str String_No="6881574" Text="Jumping Flavor"/>
+	<str String_No="6881575" Text="Flying Flavor"/>
+	<str String_No="6881576" Text="Food Mixture S"/>
+	<str String_No="6881577" Text="Food Mixture M"/>
+	<str String_No="6881578" Text="Food Mixture L"/>
+	<str String_No="6881579" Text="Healing Kiss S"/>
+	<str String_No="6881580" Text="Healing Kiss M"/>
+	<str String_No="6881581" Text="Healing Kiss L"/>
+	<str String_No="6881612" Text="Antidote"/>
+	<str String_No="6881613" Text="Smelling Salts"/>
+	<str String_No="6881614" Text="Feeling Full S"/>
+	<str String_No="6881615" Text="Feeling Full M"/>
+	<str String_No="6881616" Text="Feeling Full L"/>
+	<str String_No="6881617" Text="Jiggle Jiggle"/>
+	<str String_No="6881618" Text="Plop Plop"/>
+	<str String_No="6881619" Text="Boing Boing"/>
+	<str String_No="6881620" Text="Distinct Fragrance"/>
+	<str String_No="6881621" Text="Strong Fragrance"/>
+	<str String_No="6881622" Text="Aromatic Fragrance"/>
+	<str String_No="6881623" Text="Simple Flavor"/>
+	<str String_No="6881624" Text="Rich Flavor"/>
+	<str String_No="6881625" Text="Breath of Sprouts"/>
+	<str String_No="6881626" Text="Breath of Leaves"/>
+	<str String_No="6881627" Text="Breath of Verdure"/>
+	<str String_No="6881628" Text="Purifying Breeze"/>
+	<str String_No="6881629" Text="Curing Effect"/>
+	<str String_No="6881630" Text="Beautifying Effect"/>
+	<str String_No="6881631" Text="Words of Gratitude"/>
+	<str String_No="6881632" Text="Words of Greeting"/>
+	<str String_No="6881633" Text="Words of Blessing"/>
+	<str String_No="6881634" Text="Calm Stomach"/>
+	<str String_No="6881635" Text="Carefree Stomach"/>
+	<str String_No="6881636" Text="Hardworking Stomach"/>
+	<str String_No="6881637" Text="Flavorful Fruit"/>
+	<str String_No="6881638" Text="Fruit Cocktail"/>
+	<str String_No="6881639" Text="Purity of Body"/>
+	<str String_No="6881640" Text="Purity of Mind"/>
+	<str String_No="6881641" Text="Purity of Spirit"/>
+	<str String_No="6881642" Text="Healing Medicine"/>
+	<str String_No="6881643" Text="Recovery Medicine"/>
+	<str String_No="6881644" Text="Revival Medicine"/>
+	<str String_No="6881645" Text="Mild Sweetness"/>
+	<str String_No="6881646" Text="Sweetness"/>
+	<str String_No="6881647" Text="Super Sweetness"/>
+	<str String_No="6881648" Text="Extreme Sweetness"/>
+	<str String_No="6881675" Text="Defiance S"/>
+	<str String_No="6881676" Text="Defiance M"/>
+	<str String_No="6881677" Text="Defiance L"/>
+	<str String_No="6881679" Text="Call to Power"/>
+	<str String_No="6881680" Text="Gut Instinct"/>
+	<str String_No="6881681" Text="Steel Spirit"/>
+	<str String_No="6881683" Text="Amateur Melody"/>
+	<str String_No="6881684" Text="Calm Melody"/>
+	<str String_No="6881685" Text="Graceful Melody"/>
+	<str String_No="6881686" Text="Glorious Melody"/>
+	<str String_No="6881687" Text="Slow Acting Cure"/>
+	<str String_No="6881688" Text="Fast Acting Cure"/>
+	<str String_No="6881689" Text="Cure-All"/>
+	<str String_No="6881691" Text="Firebreeze Veil"/>
+	<str String_No="6881692" Text="Frostbolt Veil"/>
+	<str String_No="6881693" Text="Magic Veil"/>
+	<str String_No="6881694" Text="Defense Veil"/>
+	<str String_No="6881695" Text="Mysterious Power"/>
+	<str String_No="6881696" Text="Demonic Power"/>
+	<str String_No="6881697" Text="Hellish Power"/>
+	<str String_No="6881698" Text="Demon's Breath"/>
+	<str String_No="6881699" Text="Dimensional Choke"/>
+	<str String_No="6881700" Text="Dimensional Slice"/>
+	<str String_No="6881701" Text="Dimensional Overlord"/>
+	<str String_No="6881703" Text="Near Future"/>
+	<str String_No="6881704" Text="All-Seeing Eye"/>
+	<str String_No="6881705" Text="Power Pact"/>
+	<str String_No="6881706" Text="Blood Pact"/>
+	<str String_No="6881707" Text="Forbidden Pact"/>
+	<str String_No="6881733" Text="ATK Up S"/>
+	<str String_No="6881734" Text="ATK Up M"/>
+	<str String_No="6881735" Text="ATK Up L"/>
+	<str String_No="6881736" Text="DEF Up S"/>
+	<str String_No="6881737" Text="DEF Up M"/>
+	<str String_No="6881738" Text="DEF Up L"/>
+	<str String_No="6881739" Text="SPD Up S"/>
+	<str String_No="6881740" Text="SPD Up M"/>
+	<str String_No="6881741" Text="SPD Up L"/>
+	<str String_No="6881742" Text="All Stats Up S"/>
+	<str String_No="6881743" Text="All Stats Up M"/>
+	<str String_No="6881744" Text="All Stats Up L"/>
+	<str String_No="6881745" Text="Accuracy Up S"/>
+	<str String_No="6881746" Text="Accuracy Up M"/>
+	<str String_No="6881747" Text="Accuracy Up L"/>
+	<str String_No="6881748" Text="Evasion Up S"/>
+	<str String_No="6881749" Text="Evasion Up M"/>
+	<str String_No="6881750" Text="Evasion Up L"/>
+	<str String_No="6881751" Text="Critical Rate Up S"/>
+	<str String_No="6881752" Text="Critical Rate Up M"/>
+	<str String_No="6881753" Text="Critical Rate Up L"/>
+	<str String_No="6881754" Text="Energy Surge S"/>
+	<str String_No="6881755" Text="Energy Surge M"/>
+	<str String_No="6881756" Text="Energy Surge L"/>
+	<str String_No="6881757" Text="Power Resist S"/>
+	<str String_No="6881758" Text="Power Resist M"/>
+	<str String_No="6881759" Text="Power Resist L"/>
+	<str String_No="6881760" Text="Accelerating World"/>
+	<str String_No="6881777" Text="Constrict Sense"/>
+	<str String_No="6881778" Text="Constrict Spirit"/>
+	<str String_No="6881779" Text="Constrict Freedom"/>
+	<str String_No="6881780" Text="Confusing Smoke"/>
+	<str String_No="6881781" Text="Distorting Smoke"/>
+	<str String_No="6881782" Text="Choking Smog"/>
+	<str String_No="6881783" Text="Warrior Soul"/>
+	<str String_No="6881784" Text="Brave Soul"/>
+	<str String_No="6881785" Text="Hero's Soul"/>
+	<str String_No="6881806" Text="ATK Down S"/>
+	<str String_No="6881807" Text="ATK Down M"/>
+	<str String_No="6881808" Text="ATK Down L"/>
+	<str String_No="6881809" Text="DEF Down S"/>
+	<str String_No="6881810" Text="DEF Down M"/>
+	<str String_No="6881811" Text="DEF Down L"/>
+	<str String_No="6881812" Text="SPD Down S"/>
+	<str String_No="6881813" Text="SPD Down M"/>
+	<str String_No="6881814" Text="SPD Down L"/>
+	<str String_No="6881815" Text="All Stats Down S"/>
+	<str String_No="6881816" Text="All Stats Down M"/>
+	<str String_No="6881817" Text="All Stats Down L"/>
+	<str String_No="6881818" Text="Inflict Sleep S"/>
+	<str String_No="6881819" Text="Inflict Sleep M"/>
+	<str String_No="6881820" Text="Inflict Sleep L"/>
+	<str String_No="6881821" Text="Inflict Poison S"/>
+	<str String_No="6881822" Text="Inflict Poison M"/>
+	<str String_No="6881823" Text="Inflict Poison L"/>
+	<str String_No="6881824" Text="Inflict Slow S"/>
+	<str String_No="6881825" Text="Inflict Slow M"/>
+	<str String_No="6881826" Text="Inflict Slow L"/>
+	<str String_No="6881827" Text="Inflict Curse S"/>
+	<str String_No="6881828" Text="Inflict Curse M"/>
+	<str String_No="6881829" Text="Inflict Curse L"/>
+	<str String_No="6881830" Text="Inflict Blind S"/>
+	<str String_No="6881831" Text="Inflict Blind M"/>
+	<str String_No="6881832" Text="Inflict Blind L"/>
+	<str String_No="6881833" Text="Inflict Seal S"/>
+	<str String_No="6881834" Text="Inflict Seal M"/>
+	<str String_No="6881835" Text="Inflict Seal L"/>
+	<str String_No="6881836" Text="Inflict Envenom S"/>
+	<str String_No="6881837" Text="Inflict Envenom M"/>
+	<str String_No="6881838" Text="Inflict Envenom L"/>
+	<str String_No="6881839" Text="Inflict Burn S"/>
+	<str String_No="6881840" Text="Inflict Burn M"/>
+	<str String_No="6881841" Text="Inflict Burn L"/>
+	<str String_No="6881842" Text="Inflict Frostbite S"/>
+	<str String_No="6881843" Text="Inflict Frostbite M"/>
+	<str String_No="6881844" Text="Inflict Frostbite L"/>
+	<str String_No="6881845" Text="Inflict Paralyze S"/>
+	<str String_No="6881846" Text="Inflict Paralyze M"/>
+	<str String_No="6881847" Text="Inflict Paralyze L"/>
+	<str String_No="6881848" Text="Fire Vulnerability"/>
+	<str String_No="6881849" Text="Ice Vulnerability"/>
+	<str String_No="6881850" Text="Lightning Vulnerability"/>
+	<str String_No="6881851" Text="Wind Vulnerability"/>
+	<str String_No="6881852" Text="Enhanced Stun S"/>
+	<str String_No="6881853" Text="Enhanced Stun M"/>
+	<str String_No="6881854" Text="Enhanced Stun L"/>
+	<str String_No="6881855" Text="Enhanced Stun XL"/>
+	<str String_No="6881856" Text="Grievous Wound S"/>
+	<str String_No="6881857" Text="Grievous Wound M"/>
+	<str String_No="6881858" Text="Grievous Wound L"/>
+	<str String_No="6881916" Text="Cut"/>
+	<str String_No="6881917" Text="Chop"/>
+	<str String_No="6881918" Text="Crush"/>
+	<str String_No="6881919" Text="Explode"/>
+	<str String_No="6881920" Text="Catch Fish"/>
+	<str String_No="6881921" Text="Catch Bugs"/>
+	<str String_No="6881922" Text="Gathering Up S"/>
+	<str String_No="6881923" Text="Gathering Up M"/>
+	<str String_No="6881924" Text="Gathering Up L"/>
+	<str String_No="6881966" Text="Eye for Materials"/>
+	<str String_No="6881967" Text="Monster Seeker"/>
+	<str String_No="6881968" Text="Treasure Hunter"/>
+	<str String_No="6881969" Text="Movement Up S"/>
+	<str String_No="6881970" Text="Movement Up M"/>
+	<str String_No="6881971" Text="Movement Up L"/>
+	<str String_No="6881972" Text="Lightweight"/>
+	<str String_No="6881973" Text="Wind Rider"/>
+	<str String_No="6881974" Text="Basket Size S"/>
+	<str String_No="6881975" Text="Basket Size M"/>
+	<str String_No="6881976" Text="Basket Size L"/>
+	<str String_No="6881977" Text="Basket Size XL"/>
+	<str String_No="6881978" Text="Better Materials S"/>
+	<str String_No="6881979" Text="Better Materials M"/>
+	<str String_No="6881980" Text="Better Materials L"/>
+	<str String_No="6881981" Text="Better Materials XL"/>
+	<str String_No="6881982" Text="Special Materials S"/>
+	<str String_No="6881983" Text="Special Materials M"/>
+	<str String_No="6881984" Text="Special Materials L"/>
+	<str String_No="6881985" Text="Special Materials XL"/>
+	<str String_No="6881987" Text="Trait Level Up S"/>
+	<str String_No="6881988" Text="Trait Level Up M"/>
+	<str String_No="6881989" Text="Trait Level Up L"/>
+	<str String_No="6881990" Text="Trait Level Up XL"/>
+	<str String_No="6881991" Text="Rare Materials S"/>
+	<str String_No="6881992" Text="Rare Materials M"/>
+	<str String_No="6881993" Text="Rare Materials L"/>
+	<str String_No="6881994" Text="Rare Materials XL"/>
+	<str String_No="6881995" Text="Monsters &amp; Treasure"/>
+	<str String_No="6881996" Text="Rock Destroyer"/>
+	<str String_No="6881997" Text="Reset Weapon Effect"/>
+	<str String_No="6882006" Text="Tiny Traveler S"/>
+	<str String_No="6882007" Text="Tiny Traveler M"/>
+	<str String_No="6882008" Text="Tiny Traveler L"/>
+	<str String_No="6882009" Text="Tiny Traveler XL"/>
+	<str String_No="6882010" Text="Sun Lamp S"/>
+	<str String_No="6882011" Text="Sun Lamp M"/>
+	<str String_No="6882012" Text="Sun Lamp L"/>
+	<str String_No="6882013" Text="Sun Lamp XL"/>
+	<str String_No="6882014" Text="Shining Mana S"/>
+	<str String_No="6882015" Text="Shining Mana M"/>
+	<str String_No="6882016" Text="Shining Mana L"/>
+	<str String_No="6882017" Text="Shining Mana XL"/>
+	<str String_No="6882018" Text="Lost Magic S"/>
+	<str String_No="6882019" Text="Lost Magic M"/>
+	<str String_No="6882020" Text="Lost Magic L"/>
+	<str String_No="6882021" Text="Lost Magic XL"/>
+	<str String_No="6882022" Text="Celestial Explorer S"/>
+	<str String_No="6882023" Text="Celestial Explorer M"/>
+	<str String_No="6882024" Text="Celestial Explorer L"/>
+	<str String_No="6882025" Text="Celestial Explorer XL"/>
+	<str String_No="6882026" Text="Musician in Training S"/>
+	<str String_No="6882027" Text="Musician in Training M"/>
+	<str String_No="6882028" Text="Musician in Training L"/>
+	<str String_No="6882029" Text="Musician in Training XL"/>
+	<str String_No="6882030" Text="Dusk Echo S"/>
+	<str String_No="6882031" Text="Dusk Echo M"/>
+	<str String_No="6882032" Text="Dusk Echo L"/>
+	<str String_No="6882033" Text="Dusk Echo XL"/>
+	<str String_No="6882034" Text="Pure Snow S"/>
+	<str String_No="6882035" Text="Pure Snow M"/>
+	<str String_No="6882036" Text="Pure Snow L"/>
+	<str String_No="6882037" Text="Pure Snow XL"/>
+	<str String_No="6882038" Text="Solo S"/>
+	<str String_No="6882039" Text="Solo M"/>
+	<str String_No="6882040" Text="Solo L"/>
+	<str String_No="6882041" Text="Solo XL"/>
+	<str String_No="6882042" Text="Stellar Timbre S"/>
+	<str String_No="6882043" Text="Stellar Timbre M"/>
+	<str String_No="6882044" Text="Stellar Timbre L"/>
+	<str String_No="6882045" Text="Stellar Timbre XL"/>
+	<str String_No="6882046" Text="Mercenary Skills S"/>
+	<str String_No="6882047" Text="Mercenary Skills M"/>
+	<str String_No="6882048" Text="Mercenary Skills L"/>
+	<str String_No="6882049" Text="Mercenary Skills XL"/>
+	<str String_No="6882050" Text="Heavy Greatsword S"/>
+	<str String_No="6882051" Text="Heavy Greatsword M"/>
+	<str String_No="6882052" Text="Heavy Greatsword L"/>
+	<str String_No="6882053" Text="Heavy Greatsword XL"/>
+	<str String_No="6882054" Text="Vanguard Wind S"/>
+	<str String_No="6882055" Text="Vanguard Wind M"/>
+	<str String_No="6882056" Text="Vanguard Wind L"/>
+	<str String_No="6882057" Text="Vanguard Wind XL"/>
+	<str String_No="6882058" Text="Demon Edge S"/>
+	<str String_No="6882059" Text="Demon Edge M"/>
+	<str String_No="6882060" Text="Demon Edge L"/>
+	<str String_No="6882061" Text="Demon Edge XL"/>
+	<str String_No="6882062" Text="Omni-Guardian S"/>
+	<str String_No="6882063" Text="Omni-Guardian M"/>
+	<str String_No="6882064" Text="Omni-Guardian L"/>
+	<str String_No="6882065" Text="Omni-Guardian XL"/>
+	<str String_No="6882066" Text="Power Arisen S"/>
+	<str String_No="6882067" Text="Power Arisen M"/>
+	<str String_No="6882068" Text="Power Arisen L"/>
+	<str String_No="6882069" Text="Power Arisen XL"/>
+	<str String_No="6882070" Text="Resonance S"/>
+	<str String_No="6882071" Text="Resonance M"/>
+	<str String_No="6882072" Text="Resonance L"/>
+	<str String_No="6882073" Text="Resonance XL"/>
+	<str String_No="6882074" Text="Destructive Strike S"/>
+	<str String_No="6882075" Text="Destructive Strike M"/>
+	<str String_No="6882076" Text="Destructive Strike L"/>
+	<str String_No="6882077" Text="Destructive Strike XL"/>
+	<str String_No="6882078" Text="Divine Rage S"/>
+	<str String_No="6882079" Text="Divine Rage M"/>
+	<str String_No="6882080" Text="Divine Rage L"/>
+	<str String_No="6882081" Text="Divine Rage XL"/>
+	<str String_No="6882082" Text="Hero's Medal S"/>
+	<str String_No="6882083" Text="Hero's Medal M"/>
+	<str String_No="6882084" Text="Hero's Medal L"/>
+	<str String_No="6882085" Text="Hero's Medal XL"/>
+	<str String_No="6882086" Text="Breezy Wanderer S"/>
+	<str String_No="6882087" Text="Breezy Wanderer M"/>
+	<str String_No="6882088" Text="Breezy Wanderer L"/>
+	<str String_No="6882089" Text="Breezy Wanderer XL"/>
+	<str String_No="6882090" Text="Forest Guardian S"/>
+	<str String_No="6882091" Text="Forest Guardian M"/>
+	<str String_No="6882092" Text="Forest Guardian L"/>
+	<str String_No="6882093" Text="Forest Guardian XL"/>
+	<str String_No="6882094" Text="Spiritual Training S"/>
+	<str String_No="6882095" Text="Spiritual Training M"/>
+	<str String_No="6882096" Text="Spiritual Training L"/>
+	<str String_No="6882097" Text="Spiritual Training XL"/>
+	<str String_No="6882098" Text="Nature's Guard S"/>
+	<str String_No="6882099" Text="Nature's Guard M"/>
+	<str String_No="6882100" Text="Nature's Guard L"/>
+	<str String_No="6882101" Text="Nature's Guard XL"/>
+	<str String_No="6882102" Text="Truth's Guide S"/>
+	<str String_No="6882103" Text="Truth's Guide M"/>
+	<str String_No="6882104" Text="Truth's Guide L"/>
+	<str String_No="6882105" Text="Truth's Guide XL"/>
+	<str String_No="6882106" Text="Sharp Edge S"/>
+	<str String_No="6882107" Text="Sharp Edge M"/>
+	<str String_No="6882108" Text="Sharp Edge L"/>
+	<str String_No="6882109" Text="Sharp Edge XL"/>
+	<str String_No="6882110" Text="Warrior's Creed S"/>
+	<str String_No="6882111" Text="Warrior's Creed M"/>
+	<str String_No="6882112" Text="Warrior's Creed L"/>
+	<str String_No="6882113" Text="Warrior's Creed XL"/>
+	<str String_No="6882114" Text="Fierce Fang S"/>
+	<str String_No="6882115" Text="Fierce Fang M"/>
+	<str String_No="6882116" Text="Fierce Fang L"/>
+	<str String_No="6882117" Text="Fierce Fang XL"/>
+	<str String_No="6882118" Text="Wind Blade S"/>
+	<str String_No="6882119" Text="Wind Blade M"/>
+	<str String_No="6882120" Text="Wind Blade L"/>
+	<str String_No="6882121" Text="Wind Blade XL"/>
+	<str String_No="6882122" Text="Elemental Song S"/>
+	<str String_No="6882123" Text="Elemental Song M"/>
+	<str String_No="6882124" Text="Elemental Song L"/>
+	<str String_No="6882125" Text="Elemental Song XL"/>
+	<str String_No="6882206" Text="Surprise Smack"/>
+	<str String_No="6882207" Text="Terror Crack"/>
+	<str String_No="6882208" Text="Slicing Ice Edge"/>
+	<str String_No="6882209" Text="Slashing Ice Edge"/>
+	<str String_No="6882210" Text="10 Spikes"/>
+	<str String_No="6882211" Text="100 Spikes"/>
+	<str String_No="6882212" Text="1,000 Spikes"/>
+	<str String_No="6882213" Text="Fire Blessing S"/>
+	<str String_No="6882214" Text="Fire Blessing M"/>
+	<str String_No="6882215" Text="Fire Blessing L"/>
+	<str String_No="6882216" Text="Fire Blessing XL"/>
+	<str String_No="6882217" Text="Ice Blessing S"/>
+	<str String_No="6882218" Text="Ice Blessing M"/>
+	<str String_No="6882219" Text="Ice Blessing L"/>
+	<str String_No="6882220" Text="Ice Blessing XL"/>
+	<str String_No="6882221" Text="Lightning Blessing S"/>
+	<str String_No="6882222" Text="Lightning Blessing M"/>
+	<str String_No="6882223" Text="Lightning Blessing L"/>
+	<str String_No="6882224" Text="Lightning Blessing XL"/>
+	<str String_No="6882225" Text="Wind Blessing S"/>
+	<str String_No="6882226" Text="Wind Blessing M"/>
+	<str String_No="6882227" Text="Wind Blessing L"/>
+	<str String_No="6882228" Text="Wind Blessing XL"/>
+	<str String_No="6882229" Text="Heal Rune S"/>
+	<str String_No="6882230" Text="Heal Rune M"/>
+	<str String_No="6882231" Text="Heal Rune L"/>
+	<str String_No="6882232" Text="Heal Rune XL"/>
+	<str String_No="6882233" Text="Stubborn Shield"/>
+	<str String_No="6882234" Text="Indestructible Shield"/>
+	<str String_No="6882235" Text="Puni Guard"/>
+	<str String_No="6882236" Text="Puni Shield"/>
+	<str String_No="6882237" Text="Puni Rampart"/>
+	<str String_No="6882238" Text="Guardian Mirror S"/>
+	<str String_No="6882239" Text="Guardian Mirror M"/>
+	<str String_No="6882240" Text="Guardian Mirror L"/>
+	<str String_No="6882241" Text="War God's Cry S"/>
+	<str String_No="6882242" Text="War God's Cry M"/>
+	<str String_No="6882243" Text="War God's Cry L"/>
+	<str String_No="6882244" Text="Binding Curse"/>
+	<str String_No="6882245" Text="Chained Curse"/>
+	<str String_No="6882246" Text="Fire Seal"/>
+	<str String_No="6882247" Text="Inferno Seal"/>
+	<str String_No="6882248" Text="Ice Seal"/>
+	<str String_No="6882249" Text="Frost Seal"/>
+	<str String_No="6882250" Text="Lightning Seal"/>
+	<str String_No="6882251" Text="Thunderclap Seal"/>
+	<str String_No="6882252" Text="Wind Seal"/>
+	<str String_No="6882253" Text="Storm Seal"/>
+	<str String_No="6882254" Text="Burst Shell S"/>
+	<str String_No="6882255" Text="Burst Shell M"/>
+	<str String_No="6882256" Text="Burst Shell L"/>
+	<str String_No="6882257" Text="Destruction Strike"/>
+	<str String_No="6882258" Text="Creation Strike"/>
+	<str String_No="6882259" Text="Sliver of Light"/>
+	<str String_No="6882260" Text="Spreading Light"/>
+	<str String_No="6882261" Text="Blinding Light"/>
+	<str String_No="6882262" Text="Conductive Heat"/>
+	<str String_No="6882263" Text="Conductive Flame"/>
+	<str String_No="6882264" Text="Core Flow"/>
+	<str String_No="6882265" Text="Core Flood"/>
+	<str String_No="6882266" Text="Core Overflow"/>
+	<str String_No="6882267" Text="Sprite Helper"/>
+	<str String_No="6882268" Text="Sprite Assistant"/>
+	<str String_No="6882269" Text="Holy Water S"/>
+	<str String_No="6882270" Text="Holy Water M"/>
+	<str String_No="6882271" Text="Holy Water L"/>
+	<str String_No="6882272" Text="Earth Water"/>
+	<str String_No="6882273" Text="Heaven Water"/>
+	<str String_No="6882274" Text="Strength Stimulant"/>
+	<str String_No="6882275" Text="Life Stimulant"/>
+	<str String_No="6882276" Text="Soul Stimulant"/>
+	<str String_No="6882277" Text="Harvest Prayer​ S"/>
+	<str String_No="6882278" Text="Harvest Prayer​ M"/>
+	<str String_No="6882279" Text="Harvest Prayer​ L"/>
+	<str String_No="6882280" Text="Goddess Blessing S"/>
+	<str String_No="6882281" Text="Goddess Blessing M"/>
+	<str String_No="6882282" Text="Goddess Blessing L"/>
+	<str String_No="6882283" Text="Comforting Timbre S"/>
+	<str String_No="6882284" Text="Comforting Timbre M"/>
+	<str String_No="6882285" Text="Comforting Timbre L"/>
+	<str String_No="6882286" Text="Comforting Timbre XL"/>
+	<str String_No="6882287" Text="Protection S"/>
+	<str String_No="6882288" Text="Protection M"/>
+	<str String_No="6882289" Text="Protection L"/>
+	<str String_No="6882290" Text="Assassin Poison S"/>
+	<str String_No="6882291" Text="Assassin Poison M"/>
+	<str String_No="6882292" Text="Assassin Poison L"/>
+	<str String_No="6882293" Text="Feather Shield S"/>
+	<str String_No="6882294" Text="Feather Shield M"/>
+	<str String_No="6882295" Text="Feather Shield L"/>
+	<str String_No="6882296" Text="Feather Shield XL"/>
+	<str String_No="6882297" Text="Devil's Pact S"/>
+	<str String_No="6882298" Text="Devil's Pact M"/>
+	<str String_No="6882299" Text="Devil's Pact L"/>
+	<str String_No="6882300" Text="Phantom Illusion S"/>
+	<str String_No="6882301" Text="Phantom Illusion M"/>
+	<str String_No="6882302" Text="Phantom Illusion L"/>
+	<str String_No="6882303" Text="Reverse Second Hand"/>
+	<str String_No="6882304" Text="Reverse Minute Hand"/>
+	<str String_No="6882305" Text="Reverse Hour Hand"/>
+	<str String_No="6882356" Text="Finest Quality S"/>
+	<str String_No="6882357" Text="Finest Quality M"/>
+	<str String_No="6882358" Text="Finest Quality L"/>
+	<str String_No="6882359" Text="Experimentation S"/>
+	<str String_No="6882360" Text="Experimentation M"/>
+	<str String_No="6882361" Text="Experimentation L"/>
+	<str String_No="6882362" Text="Practical"/>
+	<str String_No="6882363" Text="Perpetual Ice S"/>
+	<str String_No="6882364" Text="Perpetual Ice M"/>
+	<str String_No="6882365" Text="Perpetual Ice L"/>
+	<str String_No="6882366" Text="Rise Above S"/>
+	<str String_No="6882367" Text="Rise Above M"/>
+	<str String_No="6882368" Text="Rise Above L"/>
+	<str String_No="6882369" Text="Pixie Power S"/>
+	<str String_No="6882370" Text="Pixie Power M"/>
+	<str String_No="6882371" Text="Pixie Power L"/>
+	<str String_No="6882372" Text="Great Pixie Mana"/>
+	<str String_No="6882373" Text="Ruler's Glory S"/>
+	<str String_No="6882374" Text="Ruler's Glory M"/>
+	<str String_No="6882375" Text="Ruler's Glory L"/>
+	<str String_No="6882376" Text="Money Magnet"/>
+	<str String_No="6882377" Text="Treasure Magnet"/>
+	<str String_No="6882378" Text="Accumulated Mana S"/>
+	<str String_No="6882379" Text="Accumulated Mana M"/>
+	<str String_No="6882380" Text="Accumulated Mana L"/>
+	<str String_No="6882381" Text="Witch's Incantation"/>
+	<str String_No="6882382" Text="Spellbreaker Rune"/>
+	<str String_No="6882383" Text="Magibreaker Rune"/>
+	<str String_No="6882384" Text="Fortress S"/>
+	<str String_No="6882385" Text="Fortress M"/>
+	<str String_No="6882386" Text="Fortress L"/>
+	<str String_No="6882387" Text="Unscathed"/>
+	<str String_No="6882388" Text="Flawless"/>
+	<str String_No="6882389" Text="Clear Head S"/>
+	<str String_No="6882390" Text="Clear Head M"/>
+	<str String_No="6882391" Text="Clear Head L"/>
+	<str String_No="6882392" Text="All Knowing S"/>
+	<str String_No="6882393" Text="All Knowing M"/>
+	<str String_No="6882394" Text="All Knowing L"/>
+	<str String_No="6882395" Text="Eternal Darkness S"/>
+	<str String_No="6882396" Text="Eternal Darkness M"/>
+	<str String_No="6882397" Text="Eternal Darkness L"/>
+	<str String_No="6882398" Text="Hard Exoskeleton S"/>
+	<str String_No="6882399" Text="Hard Exoskeleton M"/>
+	<str String_No="6882400" Text="Hard Exoskeleton L"/>
+	<str String_No="6882401" Text="Invincible Exoskeleton"/>
+	<str String_No="6882432" Text="Power Charm S"/>
+	<str String_No="6882433" Text="Power Charm M"/>
+	<str String_No="6882434" Text="Power Charm L"/>
+	<str String_No="6882435" Text="Hero's Emblem"/>
+	<str String_No="6882436" Text="Defense Charm S"/>
+	<str String_No="6882437" Text="Defense Charm M"/>
+	<str String_No="6882438" Text="Defense Charm L"/>
+	<str String_No="6882439" Text="Fortress Emblem"/>
+	<str String_No="6882440" Text="Speed Charm S"/>
+	<str String_No="6882441" Text="Speed Charm M"/>
+	<str String_No="6882442" Text="Speed Charm L"/>
+	<str String_No="6882443" Text="Zephyr Emblem"/>
+	<str String_No="6882444" Text="Fire Resist Up"/>
+	<str String_No="6882445" Text="Fire Resist Up+"/>
+	<str String_No="6882446" Text="Ice Resist Up"/>
+	<str String_No="6882447" Text="Ice Resist Up+"/>
+	<str String_No="6882448" Text="Lightning Resist Up"/>
+	<str String_No="6882449" Text="Lightning Resist Up+"/>
+	<str String_No="6882450" Text="Wind Resist Up"/>
+	<str String_No="6882451" Text="Wind Resist Up+"/>
+	<str String_No="6882452" Text="Monster Repellent S"/>
+	<str String_No="6882453" Text="Monster Repellent M"/>
+	<str String_No="6882454" Text="Monster Repellent L"/>
+	<str String_No="6882455" Text="Beloved Medal S"/>
+	<str String_No="6882456" Text="Beloved Medal M"/>
+	<str String_No="6882457" Text="Beloved Medal L"/>
+	<str String_No="6882458" Text="Burning Heart S"/>
+	<str String_No="6882459" Text="Burning Heart M"/>
+	<str String_No="6882460" Text="Burning Heart L"/>
+	<str String_No="6882461" Text="Burning Soul"/>
+	<str String_No="6882462" Text="Speed Step S"/>
+	<str String_No="6882463" Text="Speed Step M"/>
+	<str String_No="6882464" Text="Speed Step L"/>
+	<str String_No="6882465" Text="Photon Step"/>
+	<str String_No="6882466" Text="Safety Prayer S"/>
+	<str String_No="6882467" Text="Safety Prayer M"/>
+	<str String_No="6882468" Text="Safety Prayer L"/>
+	<str String_No="6882469" Text="Deep Bonds S"/>
+	<str String_No="6882470" Text="Deep Bonds M"/>
+	<str String_No="6882471" Text="Deep Bonds L"/>
+	<str String_No="6882472" Text="Binding Chain"/>
+	<str String_No="6882473" Text="Noble Pride S"/>
+	<str String_No="6882474" Text="Noble Pride M"/>
+	<str String_No="6882475" Text="Noble Pride L"/>
+	<str String_No="6882476" Text="Bow Down"/>
+	<str String_No="6882477" Text="Secret Knowledge S"/>
+	<str String_No="6882478" Text="Secret Knowledge M"/>
+	<str String_No="6882479" Text="Secret Knowledge L"/>
+	<str String_No="6882480" Text="Family Secret"/>
+	<str String_No="6882481" Text="Sage's Strategy S"/>
+	<str String_No="6882482" Text="Sage's Strategy M"/>
+	<str String_No="6882483" Text="Sage's Strategy L"/>
+	<str String_No="6882484" Text="Unbeatable Strategy"/>
+	<str String_No="6882515" Text="HP +10"/>
+	<str String_No="6882516" Text="HP +20"/>
+	<str String_No="6882517" Text="HP +30"/>
+	<str String_No="6882518" Text="ATK +10"/>
+	<str String_No="6882519" Text="ATK +15"/>
+	<str String_No="6882520" Text="ATK +20"/>
+	<str String_No="6882521" Text="DEF +10"/>
+	<str String_No="6882522" Text="DEF +15"/>
+	<str String_No="6882523" Text="DEF +20"/>
+	<str String_No="6882524" Text="SPD +10"/>
+	<str String_No="6882525" Text="SPD +15"/>
+	<str String_No="6882526" Text="SPD +20"/>
+	<str String_No="6882527" Text="Accuracy +3%"/>
+	<str String_No="6882528" Text="Accuracy +5%"/>
+	<str String_No="6882529" Text="Accuracy +7%"/>
+	<str String_No="6882530" Text="Accuracy +10%"/>
+	<str String_No="6882531" Text="Evasion +1%"/>
+	<str String_No="6882532" Text="Evasion +2%"/>
+	<str String_No="6882533" Text="Evasion +3%"/>
+	<str String_No="6882534" Text="Evasion +4%"/>
+	<str String_No="6882535" Text="Critical Rate Up +3%"/>
+	<str String_No="6882536" Text="Critical Rate Up +5%"/>
+	<str String_No="6882537" Text="Critical Rate Up +7%"/>
+	<str String_No="6882538" Text="Critical Rate Up +10%"/>
+	<str String_No="6882539" Text="Enhance Critical +5%"/>
+	<str String_No="6882540" Text="Enhance Critical +10%"/>
+	<str String_No="6882541" Text="Enhance Critical +15%"/>
+	<str String_No="6882542" Text="Enhance Critical +20%"/>
+	<str String_No="6882543" Text="Enhance Skills +3%"/>
+	<str String_No="6882544" Text="Enhance Skills +5%"/>
+	<str String_No="6882545" Text="Enhance Skills +7%"/>
+	<str String_No="6882546" Text="Enhance Skills +10%"/>
+	<str String_No="6882547" Text="Enhance Items +3%"/>
+	<str String_No="6882548" Text="Enhance Items +5%"/>
+	<str String_No="6882549" Text="Enhance Items +7%"/>
+	<str String_No="6882550" Text="Enhance Items +10%"/>
+	<str String_No="6882551" Text="Weaken Items +3%"/>
+	<str String_No="6882552" Text="Weaken Items +5%"/>
+	<str String_No="6882553" Text="Weaken Items +7%"/>
+	<str String_No="6882554" Text="Weaken Items +10%"/>
+	<str String_No="6882555" Text="Resist Ailments +3%"/>
+	<str String_No="6882556" Text="Resist Ailments +5%"/>
+	<str String_No="6882557" Text="Resist Ailments +7%"/>
+	<str String_No="6882558" Text="Resist Ailments +10%"/>
+	<str String_No="6882559" Text="Resist KO +3%"/>
+	<str String_No="6882560" Text="Resist KO +5%"/>
+	<str String_No="6882561" Text="Resist KO +7%"/>
+	<str String_No="6882562" Text="Resist KO +10%"/>
+	<str String_No="6882563" Text="Reduce Damage -3%"/>
+	<str String_No="6882564" Text="Reduce Damage -5%"/>
+	<str String_No="6882565" Text="Reduce Damage -7%"/>
+	<str String_No="6882566" Text="Reduce Damage -10%"/>
+	<str String_No="6882567" Text="Add Stun +3"/>
+	<str String_No="6882568" Text="Add Stun +5"/>
+	<str String_No="6882569" Text="Add Stun +7"/>
+	<str String_No="6882570" Text="Add Stun +10"/>
+	<str String_No="6882571" Text="Resist Stun +5"/>
+	<str String_No="6882572" Text="Resist Stun +10"/>
+	<str String_No="6882573" Text="Resist Stun +15"/>
+	<str String_No="6882574" Text="Resist Stun +20"/>
+	<str String_No="6882575" Text="Enhance Stun +3%"/>
+	<str String_No="6882576" Text="Enhance Stun +5%"/>
+	<str String_No="6882577" Text="Enhance Stun +7%"/>
+	<str String_No="6882578" Text="Enhance Stun +10%"/>
+	<str String_No="6882579" Text="HP Regen XS"/>
+	<str String_No="6882580" Text="HP Regen S"/>
+	<str String_No="6882581" Text="HP Regen M"/>
+	<str String_No="6882582" Text="HP Regen L"/>
+	<str String_No="6882583" Text="HP Regen XL"/>
+	<str String_No="6882614" Text="Synth Quality +5"/>
+	<str String_No="6882615" Text="Synth Quality +7"/>
+	<str String_No="6882616" Text="Synth Quality +10"/>
+	<str String_No="6882617" Text="Synth Quality +12"/>
+	<str String_No="6882618" Text="Synth Quality +15"/>
+	<str String_No="6882619" Text="Synth Quality +17"/>
+	<str String_No="6882620" Text="Synth Quality +20"/>
+	<str String_No="6882624" Text="Synth Quantity +1"/>
+	<str String_No="6882625" Text="Synth Quantity +2"/>
+	<str String_No="6882626" Text="Synth Quantity +3"/>
+	<str String_No="6882634" Text="Gear Synth: ATK +1"/>
+	<str String_No="6882635" Text="Gear Synth: ATK +2"/>
+	<str String_No="6882636" Text="Gear Synth: ATK +3"/>
+	<str String_No="6882637" Text="Gear Synth: ATK +4"/>
+	<str String_No="6882638" Text="Gear Synth: ATK +5"/>
+	<str String_No="6882639" Text="Gear Synth: DEF +1"/>
+	<str String_No="6882640" Text="Gear Synth: DEF +2"/>
+	<str String_No="6882641" Text="Gear Synth: DEF +3"/>
+	<str String_No="6882642" Text="Gear Synth: DEF +4"/>
+	<str String_No="6882643" Text="Gear Synth: DEF +5"/>
+	<str String_No="6882644" Text="Gear Synth: SPD +1"/>
+	<str String_No="6882645" Text="Gear Synth: SPD +2"/>
+	<str String_No="6882646" Text="Gear Synth: SPD +3"/>
+	<str String_No="6882647" Text="Gear Synth: SPD +4"/>
+	<str String_No="6882648" Text="Gear Synth: SPD +5"/>
+	<str String_No="6882649" Text="Gear Synth: ATK/DEF +1"/>
+	<str String_No="6882650" Text="Gear Synth: ATK/DEF +2"/>
+	<str String_No="6882651" Text="Gear Synth: ATK/DEF +3"/>
+	<str String_No="6882652" Text="Gear Synth: ATK/DEF +4"/>
+	<str String_No="6882653" Text="Gear Synth: ATK/DEF +5"/>
+	<str String_No="6882654" Text="Gear Synth: ATK/SPD +1"/>
+	<str String_No="6882655" Text="Gear Synth: ATK/SPD +2"/>
+	<str String_No="6882656" Text="Gear Synth: ATK/SPD +3"/>
+	<str String_No="6882657" Text="Gear Synth: ATK/SPD +4"/>
+	<str String_No="6882658" Text="Gear Synth: ATK/SPD +5"/>
+	<str String_No="6882659" Text="Gear Synth: DEF/SPD +1"/>
+	<str String_No="6882660" Text="Gear Synth: DEF/SPD +2"/>
+	<str String_No="6882661" Text="Gear Synth: DEF/SPD +3"/>
+	<str String_No="6882662" Text="Gear Synth: DEF/SPD +4"/>
+	<str String_No="6882663" Text="Gear Synth: DEF/SPD +5"/>
+	<str String_No="6882664" Text="Gear Synth: All +1"/>
+	<str String_No="6882665" Text="Gear Synth: All +2"/>
+	<str String_No="6882666" Text="Gear Synth: All +3"/>
+	<str String_No="6882667" Text="Gear Synth: All +4"/>
+	<str String_No="6882668" Text="Gear Synth: All +5"/>
+	<str String_No="6882689" Text="Effect Spread +1"/>
+	<str String_No="6882690" Text="Effect Spread +2"/>
+	<str String_No="6882691" Text="Effect Spread +3"/>
+	<str String_No="6882695" Text="Add Fire"/>
+	<str String_No="6882696" Text="Add Ice"/>
+	<str String_No="6882697" Text="Add Lightning"/>
+	<str String_No="6882698" Text="Add Wind"/>
+	<str String_No="6882702" Text="Element Value +1"/>
+	<str String_No="6882703" Text="Element Value +2"/>
+	<str String_No="6882704" Text="Element Value +3"/>
+	<str String_No="6882708" Text="Gather Quantity Up S"/>
+	<str String_No="6882709" Text="Gather Quantity Up M"/>
+	<str String_No="6882710" Text="Gather Quantity Up L"/>
+	<str String_No="6882711" Text="Gather Quantity Up XL"/>
+	<str String_No="6882712" Text="High Growth S"/>
+	<str String_No="6882713" Text="High Growth M"/>
+	<str String_No="6882714" Text="High Growth L"/>
+	<str String_No="6882715" Text="High Growth XL"/>
+	<str String_No="6882716" Text="Trait Level Up S"/>
+	<str String_No="6882717" Text="Trait Level Up M"/>
+	<str String_No="6882718" Text="Trait Level Up L"/>
+	<str String_No="6882719" Text="Trait Level Up XL"/>
+	<str String_No="6882720" Text="Rare Gather Rate Up S"/>
+	<str String_No="6882721" Text="Rare Gather Rate Up M"/>
+	<str String_No="6882722" Text="Rare Gather Rate Up L"/>
+	<str String_No="6882723" Text="Rare Gather Rate Up XL"/>
+	<str String_No="6882739" Text="Add (Water)"/>
+	<str String_No="6882740" Text="Add (Plant)"/>
+	<str String_No="6882742" Text="Add (Flower)"/>
+	<str String_No="6882743" Text="Add (Medicinal)"/>
+	<str String_No="6882744" Text="Add (Poison)"/>
+	<str String_No="6882745" Text="Add (Elixir)"/>
+	<str String_No="6882746" Text="Add (Sand)"/>
+	<str String_No="6882747" Text="Add (Stone)"/>
+	<str String_No="6882748" Text="Add (Ore)"/>
+	<str String_No="6882749" Text="Add (Gemstone)"/>
+	<str String_No="6882750" Text="Add (Gunpowder)"/>
+	<str String_No="6882751" Text="Add (Fuel)"/>
+	<str String_No="6882752" Text="Add (Food)"/>
+	<str String_No="6882753" Text="Add (Fruit)"/>
+	<str String_No="6882755" Text="Add (Mushroom)"/>
+	<str String_No="6882756" Text="Add (Seafood)"/>
+	<str String_No="6882757" Text="Add (Bug)"/>
+	<str String_No="6882758" Text="Add (Thread)"/>
+	<str String_No="6882759" Text="Add (Lumber)"/>
+	<str String_No="6882760" Text="Add (Gas)"/>
+	<str String_No="6882761" Text="Add (Puniball)"/>
+	<str String_No="6882762" Text="Add (Animal Product)"/>
+	<str String_No="6882763" Text="Add (Dragon)"/>
+	<str String_No="6882764" Text="Add (Mystery)"/>
+	<str String_No="6882765" Text="Add (Supplement)"/>
+	<str String_No="6882766" Text="Add (General Goods)"/>
+	<str String_No="6882767" Text="Add (Metal)"/>
+	<str String_No="6882768" Text="Add (Jewel)"/>
+</Root>
