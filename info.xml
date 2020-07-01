@@ -1,7 +1,7 @@
 str_item_ files define English translations
 
 <FieldData tag="ITEM_MIX_BAKU_UNI"> 
-    0 <Ring elem="2" type="0" restrict="0"> type is the effect number (starting from 0), type 4 = ?, type 5 = traits, type 6 = recipe
+    0 <Ring elem="2" type="0" restrict="0"> type is the effect number (starting from 0), type 4 = quality, type 5 = traits, type 6 = recipe
         <Child indexes="-1,1,-1,-1,-1,2," />  Children start count from 0, -1 means no child in position, not -1 means the index for the ring is a child
         <Param v0="0" v1="1" e0="3" e1="5" /> e[num] means the values needed to unlock the effect
     </Ring>
@@ -23,7 +23,7 @@ str_item_ files define English translations
       <Connect idx="2" val="3" elem="0" dir="2" />
       <Param v0="2" e0="2" />
     </Ring>
-    5 <Ring elem="2" type="4" restrict="0"> Isn't used?
+    5 <Ring elem="2" type="4" restrict="0"> Isn't used since it has no idx 
         <Connect val="3" elem="0" dir="4" />
         <Param v0="10" v1="15" v2="20" e0="2" e1="3" e2="4" />
     </Ring>

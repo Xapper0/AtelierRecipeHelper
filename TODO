@@ -1,0 +1,17 @@
+---------------------------------------------------------
+Database creation
+----------------------------------------------------------
+Finish the recipe builder
+Attach the recipe to a list of items
+Strip english names away and replace with string numbers
+Create cypher queries for categories, elements and synthesis categories
+Create cypher queries out of the list of items 
+Create cypher queries to add translations
+--------------------------------------------------------
+Database application
+--------------------------------------------------------
+Create cypher queries to use the database
+--------------------------------------------------------
+Front-end creation
+----------------------------------------------------------
+Apply it to Heroku
