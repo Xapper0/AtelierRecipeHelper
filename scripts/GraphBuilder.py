@@ -1,6 +1,7 @@
 import xml.etree.ElementTree as ET
 from pprint import pprint
 
+#Attribute names for the meta data
 NEW_ITEM = "ItemTag"
 MAKE_NUM = "MakeNum"
 HOURS_NEEDED = "Hour"
@@ -11,9 +12,25 @@ EFFECT = "AddEff"
 START_EFFECT = "MassEffect"
 HAS_DATA = "HasData"
 
+#Attribute and tag names for recipe data
+RECIPE_TAG = "FieldData"
+RECIPE_NAME = "tag"
+ELEMENT = "elem"
+NODE = "Ring"
+SYNTH_BOOST = "type"
+ITEM_USED = "restrict"
+CHILDREN = "Child"
+CHILDREN_STRING = "indexes"
+UNLOCK = "Connect"
+UNLOCK_COST = "value"
+BOOST = "Param"
+BOOST_VALUE = "e"
+BOOST_EFFECT = "v"
+
+#The information about the recipe
 class RecipeMeta:
     def __init__(self):
-        self.itemEnum = None
+        self.recipeName = None
         self.makeNum = None
         self.hoursNeeded = None
         self.minMats = None
@@ -22,13 +39,38 @@ class RecipeMeta:
         self.effects = []
         self.startEffects = []
 
+#The synthesis node
+class SynthNode:
+    def __init__(self):
+        self.itemUsed = None #The item used in the synthesis
+        self.children = []
+        self.unlock = None #The unlock requirements of the node (if any)
+        self.synthBoosts = []
+
+#
+class SynthUnlock:
+    def __init__(self, cost, element):
+        self.cost = cost
+        self.element = element
+
+class SynthBoost:
+    def __init__(self, cost, element, name):
+        self.cost = cost
+        self.element = element
+        self.name = name
+
+class Recipe:
+    def __init__(self, recipeMeta):
+        self.meta = recipeMeta
+        self.nodes = []
+
 #Creates a dictionary of Recipe Meta
-def createRecipeODict(metaPath):
+def createRMetaDict(metaPath):
     xmlp = ET.XMLParser(encoding='utf-8')
     tree = ET.parse(metaPath, parser=xmlp)
     root = tree.getroot()
 
-    recipeDict = {}
+    recipeMetaDict = {}
     currentRecipe = None
 
     for item in root:
@@ -37,9 +79,9 @@ def createRecipeODict(metaPath):
                 continue
 
             currentRecipe = RecipeMeta()
-            recipeDict[item.attrib.get(NEW_ITEM)] = currentRecipe
+            recipeMetaDict[item.attrib.get(NEW_ITEM)] = currentRecipe
             
-            currentRecipe.itemEnum = item.attrib.get(NEW_ITEM)
+            currentRecipe.recipeName = item.attrib.get(NEW_ITEM)
             currentRecipe.makeNum = item.attrib.get(MAKE_NUM)
             currentRecipe.hoursNeeded = item.attrib.get(HOURS_NEEDED)
             currentRecipe.minMats = item.attrib.get(MIN_MATS)
@@ -60,7 +102,7 @@ def createRecipeODict(metaPath):
             if START_EFFECT in item.attrib:
                 currentRecipe.startEffects.append(item.attrib.get(START_EFFECT))
 
-    return recipeDict
+    return recipeMetaDict
 
 #Gets the effects and appends them into an array
 def getEffects(itemAttrib):
@@ -71,15 +113,45 @@ def getEffects(itemAttrib):
         effectNo += 1
     return effectList
 
-def createRecipes(recipeDict, recipePath):
+def createRecipes(recipeMetaDict, recipePath):
     xmlp = ET.XMLParser(encoding='utf-8')
     tree = ET.parse(recipePath, parser=xmlp)
     root = tree.getroot()
 
     recipes = []
 
-    for recipe in root
+    for recipeData in root:
+        recipe = Recipe(recipeMetaDict[recipeData.find(".").attrib[RECIPE_NAME]])
+        recipes.append(recipe)
+
+        if recipeData.tag != RECIPE_TAG:
+            print("Expected:", RECIPE_TAG, "got:", recipeData)
+
+        for node in recipeData:
+            synthNode = SynthNode()
+            recipe.nodes.append(synthNode)
+
+            if node.find(".").attrib.get(SYNTH_BOOST) == None:
+                continue
+            
+            synthNode.itemUsed = recipe.meta.matsUsed[int(node.find(".").attrib[ITEM_USED])]
+
+            for tag in node:
+                if tag.tag == CHILDREN:
+                    childrenString = tag.find(".").attrib[CHILDREN_STRING]
+                    children = childrenString.split(",")
+                    synthNode.children = list(filter((-1).__ne__, children))
+
+                elif tag.tag == UNLOCK:
+                    if recipeData.find(".").attrib.get(UNLOCK_COST) != None:
+                        synthNode.unlock = SynthUnlock(tag.find(".").attrib[UNLOCK_COST], tag.find(".").attrib[ELEMENT])
+
+
+
+    return recipes
     
 
 if __name__ == "__main__":
-    createRecipeODict("data/itemrecipedata.xml")
+    recipeMetaDict = createRMetaDict("data/itemrecipedata.xml")
+    createRecipes(recipeMetaDict, "data/mixfielddata.xml")
+    
