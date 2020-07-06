@@ -1,7 +1,7 @@
 ---------------------------------------------------------
 Database creation
 ----------------------------------------------------------
-Finish the recipe builder
+Finish the recipe builder v
 Attach the recipe to a list of items
 Strip english names away and replace with string numbers
 Create cypher queries for categories, elements and synthesis categories

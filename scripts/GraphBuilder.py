@@ -1,6 +1,8 @@
 import xml.etree.ElementTree as ET
 from pprint import pprint
 
+MAX_EFFECT_COUNT = 4
+
 #Attribute names for the meta data
 NEW_ITEM = "ItemTag"
 MAKE_NUM = "MakeNum"
@@ -17,14 +19,16 @@ RECIPE_TAG = "FieldData"
 RECIPE_NAME = "tag"
 ELEMENT = "elem"
 NODE = "Ring"
-SYNTH_BOOST = "type"
+BOOST_TYPE = "type"
 ITEM_USED = "restrict"
+EXTRA_ITEM_USED = "ex_material"
 CHILDREN = "Child"
 CHILDREN_STRING = "indexes"
 UNLOCK = "Connect"
-UNLOCK_COST = "value"
+UNLOCK_COST = "val"
+UNLOCK_CONNECT = "idx"
 BOOST = "Param"
-BOOST_VALUE = "e"
+BOOST_COST = "e"
 BOOST_EFFECT = "v"
 
 #The information about the recipe
@@ -107,10 +111,12 @@ def createRMetaDict(metaPath):
 #Gets the effects and appends them into an array
 def getEffects(itemAttrib):
     effectList = []
-    effectNo = 0
-    while EFFECT + str(effectNo) in itemAttrib:
-        effectList.append(itemAttrib.get(EFFECT + str(effectNo)))
-        effectNo += 1
+    for effectNo in range(MAX_EFFECT_COUNT):
+        addEff = EFFECT + str(effectNo)
+        if addEff in itemAttrib:
+            effectList.append(itemAttrib.get(addEff))
+        else:
+            effectList.append(None)
     return effectList
 
 def createRecipes(recipeMetaDict, recipePath):
@@ -121,37 +127,58 @@ def createRecipes(recipeMetaDict, recipePath):
     recipes = []
 
     for recipeData in root:
-        recipe = Recipe(recipeMetaDict[recipeData.find(".").attrib[RECIPE_NAME]])
+        recipe = Recipe(recipeMetaDict[recipeData.attrib[RECIPE_NAME]])
         recipes.append(recipe)
 
         if recipeData.tag != RECIPE_TAG:
             print("Expected:", RECIPE_TAG, "got:", recipeData)
+            continue
+        
+        firstNode = True
 
         for node in recipeData:
             synthNode = SynthNode()
             recipe.nodes.append(synthNode)
-
-            if node.find(".").attrib.get(SYNTH_BOOST) == None:
-                continue
             
-            synthNode.itemUsed = recipe.meta.matsUsed[int(node.find(".").attrib[ITEM_USED])]
+            if len(node.attrib) < 3:
+                continue
+
+            if not firstNode: #Getting the unlock conditions
+                unlockInfo = node.find(UNLOCK)
+                if unlockInfo == None or unlockInfo.get(UNLOCK_CONNECT) == None:
+                    continue
+                elif recipeData.attrib.get(UNLOCK_COST) != None:
+                    synthNode.unlock = SynthUnlock(tag.attrib[UNLOCK_COST], tag.attrib[ELEMENT])
+            else:
+                firstNode = False
+
+            if ITEM_USED in node.attrib:
+                synthNode.itemUsed = recipe.meta.matsUsed[int(node.attrib[ITEM_USED])]
+            else:
+                synthNode.itemUsed = node.attrib[EXTRA_ITEM_USED]
 
             for tag in node:
                 if tag.tag == CHILDREN:
-                    childrenString = tag.find(".").attrib[CHILDREN_STRING]
+                    childrenString = tag.attrib[CHILDREN_STRING][:-1] #There is an extra comma at the end so it is removed
                     children = childrenString.split(",")
-                    synthNode.children = list(filter((-1).__ne__, children))
+                    synthNode.children = list(filter(("-1").__ne__, children))
 
-                elif tag.tag == UNLOCK:
-                    if recipeData.find(".").attrib.get(UNLOCK_COST) != None:
-                        synthNode.unlock = SynthUnlock(tag.find(".").attrib[UNLOCK_COST], tag.find(".").attrib[ELEMENT])
-
-
+                elif tag.tag == BOOST:    
+                    boostType = int(node.attrib[BOOST_TYPE])
+                    if boostType >= 0 and boostType <= 3:
+                        i = 0
+                        while (BOOST_COST + str(i)) in tag.attrib:
+                            boostCost = tag.attrib[BOOST_COST + str(i)]
+                            boostElem = node.attrib[ELEMENT]
+                            boostName = recipe.meta.effects[boostType][int(tag.attrib[BOOST_EFFECT + str(i)])]
+                            if boostName == None:
+                                print(recipeData.attrib, tag.attrib, recipe.meta.effects, boostType,"\n")
+                            synthNode.synthBoosts.append(SynthBoost(boostCost, boostElem, boostName))
+                            i += 1
 
     return recipes
     
 
 if __name__ == "__main__":
     recipeMetaDict = createRMetaDict("data/itemrecipedata.xml")
-    createRecipes(recipeMetaDict, "data/mixfielddata.xml")
-    
+    recipes = createRecipes(recipeMetaDict, "data/mixfielddata.xml")
