@@ -1,0 +1,710 @@
+Clean Water,(Water),,,,6750209
+Goat's Milk,(Water),(Food),,,6750210
+Plant Essence,(Water),(Medicinal),,,6750211
+Roteswasser Tonic,(Water),(Poison),,,6750212
+Foamy Water,(Water),(Gas),,,6750213
+Jade Water,(Water),(Elixir),,,6750214
+Ether Aqua,(Water),(Mystery),,,6750215
+Nameless Grass,(Plant),,,,6750216
+Fodder,(Plant),(Fuel),,,6750217
+Lucky Clover,(Plant),(Flower),(Mystery),,6750218
+Blue Clover,(Plant),(Flower),,,6750219
+Poison Grass,(Plant),(Poison),,,6750220
+Wasser Wheat,(Plant),(Food),,,6750221
+Maple Leaf,(Plant),(Fuel),(Elixir),,6750222
+Sweet Leaf,(Plant),(Food),,,6750223
+Rosen Leaf,(Plant),(Flower),(Medicinal),,6750224
+Ancient Branch,(Plant),(Elixir),(Lumber),,6750225
+Uni,(Uni),,,,6750226
+Silver Uni,(Uni),(Metal),,,6750227
+Gold Uni,(Uni),(Metal),(Mystery),,6750228
+Health Flower,(Flower),(Medicinal),,,6750229
+Northern Wind Flower,(Flower),(Poison),,,6750230
+Sunny Honey Flower,(Flower),(Spice),,,6750231
+Blessed Pure Flower,(Flower),(Mystery),,,6750232
+Memorial Mist Flower,(Flower),(Fuel),,,6750233
+Serene Moon Flower,(Flower),(Medicinal),,,6750234
+Nightglow Flower,(Flower),(Medicinal),,,6750235
+Lantern Grass,(Flower),(Plant),(Mystery),,6750236
+Bubble Grass,(Flower),(Plant),(Gas),,6750237
+Serenity Flower,(Flower),(Medicinal),,,6750238
+Spring Princess,(Flower),(Medicinal),(Elixir),,6750239
+Esplante,(Flower),(Poison),,,6750240
+Delphi Rose,(Flower),(Thread),,,6750241
+Taun,(Medicinal),(Plant),,,6750242
+Tall Taun,(Medicinal),(Plant),,,6750243
+Mutant Taun,(Medicinal),(Plant),,,6750244
+Triplet Taun,(Medicinal),(Plant),,,6750245
+Crimson Grass,(Medicinal),(Elixir),,,6750246
+Bitter Root,(Medicinal),(Poison),,,6750247
+Sapling Branch,(Medicinal),(Mystery),,,6750248
+Medicine Moss,(Medicinal),(Plant),,,6750249
+Fertile Soil,(Medicinal),(Fuel),,,6750250
+Medium Medicine,(Medicinal),(Poison),(Elixir),,6750251
+Kumine Fruit,(Poison),(Food),,,6750252
+Kumine Poison,(Poison),(Water),,,6750253
+Rotten Tree Bark,(Poison),(Fuel),,,6750254
+Resentful Scream,(Poison),(Plant),,,6750255
+Mushroom Powder,(Poison),(Gas),,,6750256
+Death's Grief,(Poison),(Plant),,,6750257
+Forest Sage,(Elixir),(Medicinal),,,6750258
+Dunkelheit,(Elixir),(Medicinal),(Poison),(Mystery),6750259
+Soft Sand,(Sand),,,,6750260
+Burning Sand,(Sand),(Fuel),,,6750261
+Ashen Sand,(Sand),,,,6750262
+Polluted Humus,(Sand),(Fuel),(Poison),,6750263
+Emerald Glass,(Sand),(Gemstone),,,6750264
+Sandstone,(Stone),,,,6750265
+Nectar Rock,(Stone),(Spice),,,6750266
+Eroded Stone,(Stone),,,,6750267
+Ancient Pillar,(Stone),,,,6750268
+Coral Stone,(Stone),(Gemstone),,,6750269
+Cave Coral,(Stone),,,,6750270
+Riverstone,(Stone),(Gemstone),,,6750271
+Blue Flame Riverstone,(Stone),(Gemstone),,,6750272
+Waterside Moss Stone,(Stone),(Sand),,,6750273
+Stalactite Fragment,(Stone),,,,6750274
+Ethereal Stone,(Stone),,,,6750275
+Crimson Ore,(Ore),(Gunpowder),,,6750276
+Aqua Ore,(Ore),(Water),,,6750277
+Lightning Ore,(Ore),(Gemstone),,,6750278
+Amatite Ore,(Ore),,,,6750279
+Koberinite,(Ore),,,,6750280
+Pentanite,(Ore),,,,6750281
+Mordinite,(Ore),,,,6750282
+Goldinite,(Ore),,,,6750283
+Cometstone,(Ore),(Mystery),,,6750284
+Degenesis Stone,(Ore),(Gemstone),,,6750285
+Septrin,(Ore),(Gemstone),(Mystery),,6750286
+Small Crystal,(Gemstone),(Mystery),,,6750287
+Unknown Gemstone,(Gemstone),,,,6750288
+Shell Pearl,(Gemstone),(Seafood),,,6750289
+Marbled Stone,(Gemstone),,,,6750290
+Amber Fragment,(Gemstone),(Sand),,,6750291
+Amber Crystal,(Gemstone),(Ore),,,6750292
+Magnemalmoa,(Gemstone),,,,6750293
+Holy Arbor Crystal,(Gemstone),(Mystery),,,6750294
+Rainbow Gemstone,(Gemstone),,,,6750295
+Dried Lumber,(Gunpowder),,,,6750296
+Flame Black Sand,(Gunpowder),,,,6750297
+Magma Powder,(Gunpowder),,,,6750298
+Scrap Paper,(Fuel),,,,6750299
+Flammable Bark,(Fuel),(Lumber),,,6750300
+Palma Bark,(Fuel),(Lumber),,,6750301
+Natural Oil,(Fuel),,,,6750302
+Smokey Charcoal,(Fuel),,,,6750303
+Palma Charcoal,(Fuel),,,,6750304
+Wild Potato,(Food),,,,6750305
+Beast Meat,(Food),,,,6750306
+Fresh Meat,(Food),,,,6750307
+Kurken Fruit,(Food),(Medicinal),,,6750308
+Unknown Egg,(Food),(Fuel),,,6750309
+Rainbow Grape,(Fruit),,,,6750310
+Palma Fruit,(Fruit),(Water),,,6750311
+Fresh Berry,(Fruit),(Spice),,,6750312
+Oil Tree Fruit,(Fruit),(Food),(Fuel),,6750313
+Nectar Fruit,(Fruit),(Food),(Spice),,6750314
+Beehive,(Beehive),(Gunpowder),,,6750315
+Silver Beehive,(Beehive),(Gunpowder),,,6750316
+Gold Beehive,(Beehive),(Gunpowder),,,6750317
+Eicheloa,(Mushroom),,,,6750318
+Dream Mushroom,(Mushroom),(Gas),,,6750319
+Mushroom Colony,(Mushroom),,,,6750320
+Jupitonion,(Mushroom),(Gas),,,6750321
+Golden Crown,(Mushroom),(Mystery),,,6750322
+Pretty Shell,(Seafood),,,,6750323
+Sardine,(Seafood),,,,6750324
+Exofish,(Seafood),(Gas),,,6750325
+Spikey,(Seafood),,,,6750326
+Selior,(Seafood),,,,6750327
+Purumuru,(Seafood),(Ore),,,6750328
+Crab,(Seafood),,,,6750329
+Xisor,(Seafood),,,,6750330
+Sawe Fish,(Seafood),,,,6750331
+Mace Fish,(Seafood),,,,6750332
+Myria Fish,(Seafood),(Elixir),,,6750333
+Lake Master,(Seafood),(Puniball),,,6750334
+Underworld Master,(Seafood),(Poison),,,6750335
+Seven Stars,(Bug),,,,6750336
+Honey Ant,(Bug),(Spice),,,6750337
+Lantern Fly,(Bug),(Mystery),,,6750338
+Rose Bee,(Bug),(Poison),,,6750339
+Giant Beetle,(Bug),(Ore),,,6750340
+Bomb Dragoon,(Bug),(Gas),,,6750341
+Spear Worm,(Bug),(Medicinal),,,6750342
+Amber Fly,(Bug),(Gemstone),,,6750343
+Lapis Papillion,(Bug),(Mystery),,,6750344
+Heavy Wyrm,(Bug),(Dragon),,,6750345
+Trihorn,(Bug),(Jewel),,,6750346
+Restraint Silk,(Thread),,,,6750347
+Tough Vine,(Thread),(Plant),,,6750348
+Cotton Grass,(Thread),(Plant),,,6750349
+Arbor Ivy,(Thread),,,,6750350
+Eiche,(Lumber),,,,6750351
+Tough Log,(Lumber),,,,6750352
+Mossy Driftwood,(Lumber),(Plant),,,6750353
+Palma,(Lumber),,,,6750354
+Fossil Tree,(Lumber),,,,6750355
+Fragrant Honey Tree,(Lumber),(Gas),,,6750356
+Underworld Rotwood,(Lumber),(Poison),,,6750357
+Holy Arbor Branch,(Lumber),(Mystery),,,6750358
+Wing Plant,(Plant),(Gas),,,6750359
+Sky Bubble,(Gas),,,,6750360
+Crispy Mushroom,(Mushroom),(Gas),,,6750361
+Rotwood Miasma,(Gas),(Poison),,,6750362
+Blue Puniball,(Puniball),,,,6750363
+Green Puniball,(Puniball),,,,6750364
+Red Puniball,(Puniball),,,,6750365
+Black Puniball,(Puniball),,,,6750366
+Silver Puniball,(Puniball),(Jewel),,,6750367
+Gold Puniball,(Puniball),(Jewel),,,6750368
+Large Feather,(Animal Product),,,,6750369
+Animal Hide,(Animal Product),,,,6750370
+Mythical Hide,(Animal Product),(Mystery),,,6750371
+Large Bone,(Animal Product),,,,6750372
+Snake Slough,(Animal Product),,,,6750373
+Beast Fossil,(Animal Product),,,,6750374
+Fairystone Fragment,(Mystery),,,,6750375
+Dark Crystal Fragment,(Mystery),(Poison),,,6750376
+Holy Stone Fragment,(Mystery),(Gemstone),,,6750377
+Magic Tome Piece,(Mystery),(Fuel),,,6750378
+Old Magic Tome,(Mystery),(Fuel),,,6750379
+Underworld Core,(Mystery),(Gemstone),,,6750380
+Holy Tree Leaf,(Mystery),(Plant),(Elixir),,6750381
+Maple Bark,(Spice),(Fuel),,,6750382
+Honey Tree Branch,(Spice),(Lumber),,,6750383
+Spirit Flower,(Flower),(Mystery),,,6750384
+Spirit Feather,(Thread),(Mystery),,,6750385
+Rusted Sword,(Metal),,,,6750386
+Old Knight Emblem,(Metal),(Mystery),,,6750387
+Beast Venom Pouch,(Poison),(Animal Product),,,6750388
+Lunatic Poison Lance,(Poison),(Animal Product),,,6750389
+Beast Fin,(Food),(Animal Product),(Thread),,6750390
+Earth Fish Fang,(Animal Product),(Poison),,,6750391
+Beast Shell,(Ore),(Bug),,,6750392
+Beast Spirit Armor,(Ore),(Gemstone),(Bug),,6750393
+Beast Scales,(Animal Product),(Ore),,,6750394
+Atonement Stinger,(Animal Product),(Poison),,,6750395
+Fire Core,(Mystery),(Gunpowder),,,6750396
+Ice Core,(Mystery),(Water),,,6750397
+Lightning Core,(Mystery),(Sand),,,6750398
+Wind Core,(Mystery),(Gas),,,6750399
+Dark Core,(Mystery),(Poison),,,6750400
+Dragon Meat,(Dragon),(Food),,,6750401
+Dragon Wing,(Dragon),(Gas),,,6750402
+Dragon Egg,(Dragon),(Fuel),,,6750403
+Dragon's Eye,(Dragon),(Elixir),(Mystery),,6750404
+Giant Puniball,(Puniball),,,,6750405
+Giant Claw,(Animal Product),,,,6750406
+Fairy Segment,(Mystery),,,,6750407
+Golem Core,(Ore),,,,6750408
+Heroic Spirit,(Mystery),,,,6750409
+Eternal Fire,(Fuel),(Gunpowder),(Mystery),,6750410
+Shining Sand,(Sand),(Gas),(Mystery),,6750411
+Solflower,(Flower),(Elixir),,,6750412
+Eternal Crystal,(Ore),(Gemstone),,,6750413
+Stinky Trash,(Food),(Poison),,,6750414
+Broken Item,(Metal),(General Goods),,,6750415
+Burnt Ash,(Poison),,,,6750416
+,,,,,6750417
+,,,,,6750418
+,,,,,6750419
+,,,,,6750420
+,,,,,6750421
+,,,,,6750422
+,,,,,6750423
+,,,,,6750424
+,,,,,6750425
+,,,,,6750426
+,,,,,6750427
+,,,,,6750428
+,,,,,6750429
+,,,,,6750430
+,,,,,6750431
+,,,,,6750432
+,,,,,6750433
+,,,,,6750434
+,,,,,6750435
+,,,,,6750436
+,,,,,6750437
+,,,,,6750438
+,,,,,6750439
+,,,,,6750440
+,,,,,6750441
+,,,,,6750442
+,,,,,6750443
+,,,,,6750444
+,,,,,6750445
+Explosive Uni,(Bomb),,,,6750446
+Ice Caltrop,(Bomb),,,,6750447
+Craft,(Bomb),,,,6750448
+Bomb,(Bomb),,,,6750449
+Ice Bomb,(Bomb),,,,6750450
+Plajig,(Bomb),,,,6750451
+Luft,(Bomb),,,,6750452
+Norden Brand,(Magic Tool),,,,6750453
+Lightning Bell,(Magic Tool),,,,6750454
+Bubble Bullet,(Bomb),,,,6750455
+Rose Bomb,(Bomb),,,,6750456
+Kleid Ice Bomb,(Bomb),,,,6750457
+Strahl Plajig,(Bomb),,,,6750458
+Ratsel Luft,(Bomb),,,,6750459
+Fire Bottle,(Magic Tool),,,,6750460
+Genesis Hammer,(Magic Tool),,,,6750461
+Vanish Siegel,(Magic Tool),,,,6750462
+Lunar Lamp,(Magic Tool),,,,6750463
+Eternal Fear,(Magic Tool),,,,6750464
+Philosopher's Book,(Magic Tool),,,,6750465
+,,,,,6750466
+,,,,,6750467
+,,,,,6750468
+,,,,,6750469
+,,,,,6750470
+,,,,,6750471
+,,,,,6750472
+,,,,,6750473
+,,,,,6750474
+,,,,,6750475
+Grass Beans,(Medicine),,,,6750476
+Dry Biscuit,(Food),,,,6750477
+Blessing Ointment,(Medicine),,,,6750478
+Puni Jelly,(Food),,,,6750479
+Rasen Pudding,(Food),,,,6750480
+Trickling Breeze,(Medicine),,,,6750481
+Restoration Bottle,(Medicine),,,,6750482
+Nectar,(Medicine),,,,6750483
+Healing Ball,(Medicine),,,,6750484
+Dynamic Syrup,(Medicine),,,,6750485
+Cocktail Leb,(Food),,,,6750486
+Goddess Cup,(Medicine),,,,6750487
+Elixir,(Medicine),,,,6750488
+,,,,,6750489
+,,,,,6750490
+,,,,,6750491
+,,,,,6750492
+,,,,,6750493
+,,,,,6750494
+,,,,,6750495
+,,,,,6750496
+,,,,,6750497
+Fish Oil,(Medicine),,,,6750498
+War Powder,(Medicine),,,,6750499
+Thorny Embrace,(Magic Tool),,,,6750500
+Energianica,(Magic Tool),,,,6750501
+Sundry Remedy,(Medicine),,,,6750502
+Poison Smoke,(Magic Tool),,,,6750503
+Mystic Robe,(Magic Tool),,,,6750504
+Miracle Ebonyal,(Medicine),,,,6750505
+Heroic Geist,(Magic Tool),,,,6750506
+Astronomical Clock,(Magic Tool),,,,6750507
+,,,,,6750508
+,,,,,6750509
+,,,,,6750510
+,,,,,6750511
+,,,,,6750512
+,,,,,6750513
+,,,,,6750514
+,,,,,6750515
+,,,,,6750516
+,,,,,6750517
+Reaper's Scythe,(Gathering),,,,6750518
+Woodcutter's Axe,(Gathering),,,,6750519
+Hammer,(Gathering),,,,6750520
+Bomb Rod,(Gathering),,,,6750521
+Fishing Rod,(Gathering),,,,6750522
+Bug Net,(Gathering),,,,6750523
+Compass,(Gathering),,,,6750524
+Wind Shoes,(Gathering),,,,6750525
+Knapsack,(Gathering),,,,6750526
+Mirage Loupe,(Gathering),,,,6750527
+Scythe Axe,(Gathering),,,,6750528
+Bomb Hammer,(Gathering),,,,6750529
+Fishing Rod Net,(Gathering),,,,6750530
+Loupe Compass,(Gathering),,,,6750531
+Exploration Set,(Gathering),,,,6750532
+,,,,,6750533
+,,,,,6750534
+,,,,,6750535
+,,,,,6750536
+,,,,,6750537
+Red Supplement,(Supplement),,,,6750538
+Blue Supplement,(Supplement),,,,6750539
+Yellow Supplement,(Supplement),,,,6750540
+Green Supplement,(Supplement),,,,6750541
+Polish Powder,(General Goods),,,,6750542
+Zettel,(General Goods),(Fuel),,,6750543
+Delicious Bait,(General Goods),(Food),,,6750544
+Alchemy Paint,(General Goods),(Poison),,,6750545
+Delphi Rose Incense,(General Goods),(Flower),,,6750546
+Ingot,(Ingot),(Metal),,,6750547
+Bronze Eisen,(Ingot),(Metal),,,6750548
+Staltium,(Ingot),(Metal),,,6750549
+Criminea,(Ingot),(Metal),,,6750550
+Goldoterion,(Ingot),(Metal),,,6750551
+Cloth,(Cloth),,,,6750552
+Natural Cloth,(Cloth),(Plant),,,6750553
+Beastial Air,(Cloth),(Animal Product),,,6750554
+Sorcery Rose,(Cloth),(Gas),,,6750555
+Eldrocode,(Cloth),(Jewel),,,6750556
+Pearl Crystal,(Jewel),,,,6750557
+Amberlite,(Jewel),,,,6750558
+Spirinite,(Jewel),,,,6750559
+Saint's Diamond,(Jewel),,,,6750560
+Arc en Ciel,(Jewel),,,,6750561
+Honey,(Spice),,,,6750562
+Eltz Sugar,(Spice),,,,6750563
+Traveler's Water Orb,(Water),(Mystery),,,6750564
+Super Pure Water,(Water),,,,6750565
+Healing Chip,(Medicinal),(Gas),,,6750566
+Holy Drop,(Medicinal),(Elixir),,,6750567
+Poison Cube,(Poison),,,,6750568
+Taboo Drop,(Poison),,,,6750569
+Lightning Sand,(Sand),,,,6750570
+Marblestone,(Stone),,,,6750571
+Gunpowder Base,(Gunpowder),,,,6750572
+Blue Flame Ember,(Gunpowder),(Fuel),,,6750573
+Mixing Oil,(Fuel),,,,6750574
+Meltstone,(Fuel),(Stone),,,6750575
+Flour,(Food),,,,6750576
+Gelatin Powder,(Food),(Medicinal),,,6750577
+Alchemy Fibers,(Thread),,,,6750578
+Heaven's String,(Thread),(Mystery),,,6750579
+Composite Plate,(Lumber),(Metal),,,6750580
+Holy Nut,(Lumber),(Mystery),,,6750581
+Mist Liquid,(Gas),,,,6750582
+Feather Draft,(Gas),,,,6750583
+Puni Leather,(Animal Product),(Puniball),,,6750584
+Master Leather,(Animal Product),(Dragon),,,6750585
+Glass Flower,(Mystery),(Jewel),,,6750586
+Spirit Bottle,(Mystery),(General Goods),,,6750587
+Crystal Element,(Mystery),(Gunpowder),(Water),(Sand),6750588
+Philosopher's Stone,(Elixir),(Supplement),(Jewel),(Mystery),6750589
+Plant Seed,(Seed),,,,6750590
+Stone Seed,(Seed),,,,6750591
+Fire Seed,(Seed),,,,6750592
+Water Seed,(Seed),,,,6750593
+Mystic Seed,(Seed),,,,6750594
+,,,,,6750595
+,,,,,6750596
+,,,,,6750597
+,,,,,6750598
+,,,,,6750599
+,,,,,6750600
+,,,,,6750601
+,,,,,6750602
+,,,,,6750603
+,,,,,6750604
+,,,,,6750605
+,,,,,6750606
+,,,,,6750607
+,,,,,6750608
+,,,,,6750609
+,,,,,6750610
+,,,,,6750611
+,,,,,6750612
+,,,,,6750613
+,,,,,6750614
+Handmade Staff,(Weapon),,,,6750615
+Helioprox,(Weapon),,,,6750616
+Grim Quartz,(Weapon),,,,6750617
+Rune Code,(Weapon),,,,6750618
+Celestial Seeker,(Weapon),,,,6750619
+Practice Flute,(Weapon),,,,6750620
+Crepusculum,(Weapon),,,,6750621
+Virgin Snow,(Weapon),,,,6750622
+Concert Mistress,(Weapon),,,,6750623
+Ethereal Tone,(Weapon),,,,6750624
+Weathered Sword,(Weapon),,,,6750625
+Colossal Edge,(Weapon),,,,6750626
+Initiator,(Weapon),,,,6750627
+Schwartz Thruster,(Weapon),,,,6750628
+Lord Guardian,(Weapon),,,,6750629
+Stake Hammer,(Weapon),,,,6750630
+Clairempathy,(Weapon),,,,6750631
+Destruction,(Weapon),,,,6750632
+Holy Torrent,(Weapon),,,,6750633
+Brave Emblem,(Weapon),,,,6750634
+Pilgrimage Staff,(Weapon),,,,6750635
+Forest Bell,(Weapon),,,,6750636
+Training Path,(Weapon),,,,6750637
+Holy Arbor Staff,(Weapon),,,,6750638
+Occult Wisdom,(Weapon),,,,6750639
+Iron Claws,(Weapon),,,,6750640
+Krieger's Talon,(Weapon),,,,6750641
+Hail Crunch,(Weapon),,,,6750642
+Wind Slicer,(Weapon),,,,6750643
+Oren Herald,(Weapon),,,,6750644
+,,,,,6750645
+,,,,,6750646
+,,,,,6750647
+,,,,,6750648
+,,,,,6750649
+,,,,,6750650
+,,,,,6750651
+,,,,,6750652
+,,,,,6750653
+,,,,,6750654
+,,,,,6750655
+,,,,,6750656
+,,,,,6750657
+,,,,,6750658
+,,,,,6750659
+,,,,,6750660
+,,,,,6750661
+,,,,,6750662
+,,,,,6750663
+,,,,,6750664
+Kurken Sweats,(Armor),,,,6750665
+Noble Tunic,(Armor),,,,6750666
+Leather Protector,(Armor),,,,6750667
+Chain Vest,(Armor),,,,6750668
+Border Scale,(Armor),,,,6750669
+Radiant Plate,(Armor),,,,6750670
+Skuller Coat,(Armor),,,,6750671
+Frost Armor,(Armor),,,,6750672
+Charade Lumont,(Armor),,,,6750673
+Fairy Cloak,(Armor),,,,6750674
+Golden Mail,(Armor),,,,6750675
+Darkness Dress,(Armor),,,,6750676
+Fortress Armor,(Armor),,,,6750677
+Sage's Cloak,(Armor),,,,6750678
+Stark Cologne,(Armor),,,,6750679
+,,,,,6750680
+,,,,,6750681
+,,,,,6750682
+,,,,,6750683
+,,,,,6750684
+,,,,,6750685
+,,,,,6750686
+,,,,,6750687
+,,,,,6750688
+,,,,,6750689
+Energy Pendant,(Accessory),,,,6750690
+Gnardi Ring,(Accessory),,,,6750691
+Frostfire Earring,(Accessory),,,,6750692
+Boltwind Earring,(Accessory),,,,6750693
+Exorcism Brooch,(Accessory),,,,6750694
+Quartz Necklace,(Accessory),,,,6750695
+Heated Bangle,(Accessory),,,,6750696
+Godspeed Boots,(Accessory),,,,6750697
+Migratory Charm,(Accessory),,,,6750698
+Fairystone Chain,(Accessory),,,,6750699
+Baron's Crown,(Accessory),,,,6750700
+Elixir Ring,(Accessory),,,,6750701
+,,,,,6750702
+,,,,,6750703
+,,,,,6750704
+,,,,,6750705
+,,,,,6750706
+,,,,,6750707
+,,,,,6750708
+,,,,,6750709
+,,,,,6750710
+,,,,,6750711
+Goat Meat,(Important),,,,6750712
+Salt Grass,(Plant),,,,6750713
+Fairystone Block,(Gemstone),,,,6750714
+Building Material,(Lumber),,,,6750715
+Stone Material,(Stone),,,,6750716
+Seaweed Soil,(Sand),,,,6750717
+Soft Rubber Stone,(Magic Tool),,,,6750718
+Monster Attractor,(General Goods),(Magic Tool),,,6750719
+Powerful Fish Bait,(General Goods),(Food),,,6750720
+Resonance Orb,(Stone),(Metal),,,6750721
+Prosthetic Arm,(Metal),,,,6750722
+Super Steel Gear,(Metal),,,,6750723
+Old Pynnor Key,(Important),,,,6750724
+Pynnor Key,(Important),,,,6750725
+Red Stone,(Elixir),(Mystery),,,6750726
+Queen's Treasure,(Important),,,,6750727
+Crimson Stone,(Important),,,,6750728
+Core Crystal I,(Important),,,,6750729
+Core Crystal II,(Important),,,,6750730
+Core Crystal III,(Important),,,,6750731
+Travel Bottle: Sun,(Important),,,,6750732
+Travel Bottle: Moon,(Important),,,,6750733
+Travel Bottle: Star,(Important),,,,6750734
+Travel Bottle: Space,(Important),,,,6750735
+Travel Bottle: Underworld,(Important),,,,6750736
+Soleil Fruit,(Important),,,,6750737
+Grizzly Wood,(Important),,,,6750738
+Akashia Sap,(Important),,,,6750739
+Waterproof Oil,(Important),,,,6750740
+Resort Woodchip,(Important),,,,6750741
+Plain Lumber,(Important),,,,6750742
+Mastery Paint,(Important),,,,6750743
+Royal Tilestone,(Important),,,,6750744
+,,,,,6750745
+,,,,,6750746
+,,,,,6750747
+,,,,,6750748
+,,,,,6750749
+,,,,,6750750
+,,,,,6750751
+,,,,,6750752
+,,,,,6750753
+,,,,,6750754
+,,,,,6750755
+,,,,,6750756
+,,,,,6750757
+Power Reactor,(Important),,,,6750758
+,,,,,6750759
+,,,,,6750760
+,,,,,6750761
+,,,,,6750762
+,,,,,6750763
+,,,,,6750764
+,,,,,6750765
+,,,,,6750766
+,,,,,6750767
+,,,,,6750768
+,,,,,6750769
+,,,,,6750770
+,,,,,6750771
+,,,,,6750772
+,,,,,6750773
+,,,,,6750774
+,,,,,6750775
+,,,,,6750776
+,,,,,6750777
+,,,,,6750778
+,,,,,6750779
+,,,,,6750780
+Goat Hoof Stamp,(Important),,,,6750781
+Slate Fragment,(Important),,,,6750782
+Fresh Goat Milk,(Important),,,,6750783
+,,,,,6750784
+,,,,,6750785
+,,,,,6750786
+,,,,,6750787
+,,,,,6750788
+,,,,,6750789
+,,,,,6750790
+,,,,,6750791
+,,,,,6750792
+,,,,,6750793
+,,,,,6750794
+,,,,,6750795
+,,,,,6750796
+Traveler's Log,(Fuel),,,,6750797
+Continental Book,(Fuel),,,,6750798
+,,,,,6750799
+,,,,,6750800
+,,,,,6750801
+,,,,,6750802
+,,,,,6750803
+,,,,,6750804
+,,,,,6750805
+,,,,,6750806
+,,,,,6750807
+,,,,,6750808
+,,,,,6750809
+,,,,,6750810
+,,,,,6750811
+,,,,,6750812
+,,,,,6750813
+,,,,,6750814
+,,,,,6750815
+,,,,,6750816
+,,,,,6750817
+,,,,,6750818
+,,,,,6750819
+,,,,,6750820
+,,,,,6750821
+,,,,,6750822
+,,,,,6750823
+,,,,,6750824
+,,,,,6750825
+,,,,,6750826
+,,,,,6750827
+,,,,,6750828
+,,,,,6750829
+,,,,,6750830
+,,,,,6750831
+,(Furniture),,,,6750832
+,(Furniture),,,,6750833
+,(Furniture),,,,6750834
+,(Furniture),,,,6750835
+,(Furniture),,,,6750836
+,(Furniture),,,,6750837
+,(Furniture),,,,6750838
+,(Furniture),,,,6750839
+,(Furniture),,,,6750840
+,(Furniture),,,,6750841
+,(Furniture),,,,6750842
+,(Furniture),,,,6750843
+,(Furniture),,,,6750844
+,(Furniture),,,,6750845
+,(Furniture),,,,6750846
+,(Furniture),,,,6750847
+,(Furniture),,,,6750848
+,(Furniture),,,,6750849
+,(Furniture),,,,6750850
+,(Furniture),,,,6750851
+,(Furniture),,,,6750852
+,(Furniture),,,,6750853
+,(Furniture),,,,6750854
+,(Furniture),,,,6750855
+,(Furniture),,,,6750856
+,(Furniture),,,,6750857
+,(Furniture),,,,6750858
+,(Furniture),,,,6750859
+,(Furniture),,,,6750860
+,(Furniture),,,,6750861
+,(Furniture),,,,6750862
+,(Furniture),,,,6750863
+,(Furniture),,,,6750864
+,(Furniture),,,,6750865
+,(Furniture),,,,6750866
+,(Furniture),,,,6750867
+,(Furniture),,,,6750868
+,(Furniture),,,,6750869
+,(Furniture),,,,6750870
+,(Furniture),,,,6750871
+,,,,,6750872
+,,,,,6750873
+,,,,,6750874
+,,,,,6750875
+,,,,,6750876
+,,,,,6750877
+,,,,,6750878
+,,,,,6750879
+,,,,,6750880
+,,,,,6750881
+Old Alchemy Book,(Important),,,,6750882
+My First Dessert,(Important),,,,6750883
+Materials Refined,(Important),,,,6750884
+Kurken Fashion,(Important),,,,6750885
+Home Crafting Guide,(Important),,,,6750886
+Gathering Methods,(Important),,,,6750887
+Let's Plant a Garden!,(Important),,,,6750888
+Pudding Made Easy,(Important),,,,6750889
+Common Paper Recipe,(Important),,,,6750890
+Solid Fuel Recipe,(Important),,,,6750891
+Jiggling Recipe,(Important),,,,6750892
+,(Important),,,,6750893
+Power of Nature,(Important),,,,6750894
+Secrets of Alchemy,(Important),,,,6750895
+Revelation Book,(Important),,,,6750896
+Beginner's Book,(Important),,,,6750897
+Cover Your Bases!,(Important),,,,6750898
+Aroma Components,(Important),,,,6750899
+Popular Animal Feed!,(Important),,,,6750900
+A Lonely Alchemist,(Important),,,,6750901
+Hideout Materials,(Important),,,,6750902
+Champion's Trials,(Important),,,,6750903
+Creation & Destruction,(Important),,,,6750904
+Sweets That Pop,(Important),,,,6750905
+Danger: Fire!,(Important),,,,6750906
+Purely Water,(Important),,,,6750907
+Handheld Warheads,(Important),,,,6750908
+Moon Magic,(Important),,,,6750909
+Rage of Gaia,(Important),,,,6750910
+Prayer for Health,(Important),,,,6750911
+Fantasy Cloth,(Important),,,,6750912
+Book of Storms,(Important),,,,6750913
+Travel Companions,(Important),,,,6750914
+Lila's Note,(Important),,,,6750915
+Tao's Note,(Important),,,,6750916
+Creating a True Key,(Important),,,,6750917
+Power Manifest,(Important),,,,6750918

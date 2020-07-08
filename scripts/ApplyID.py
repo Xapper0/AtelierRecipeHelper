@@ -59,5 +59,6 @@ def testIDs(enumsPath, translatedPath):
                 
 
 if __name__ == "__main__":
-    applyID(6750209, "data/ryza_enums.csv")
-    testIDs("data/ryza_enums_id.csv", "data/str_item.csv")
+    # applyID(6750209, "data/ryza_enums.csv")
+    # applyID(6750209, "data/itemcat.csv")
+    # testIDs("data/ryza_enums_id.csv", "data/str_item.csv")
