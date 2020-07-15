@@ -1,0 +1,24 @@
+﻿[
+  {
+    "n": {
+      "identity": 13,
+      "labels": [
+        "Category"
+      ],
+      "properties": {
+        "string_id": "6751090"
+      }
+    }
+  },
+  {
+    "n": {
+      "identity": 42,
+      "labels": [
+        "Category"
+      ],
+      "properties": {
+        "string_id": "6751119"
+      }
+    }
+  }
+]

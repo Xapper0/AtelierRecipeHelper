@@ -234,8 +234,7 @@ def createItems(itemPath, recipes):
                 items.append(Item(item[5], categories, recipes.get(item[5])))
     return items
 
-if __name__ == "__main__":
-    recipeMetaDict = createRMetaDict("data/itemrecipedata.xml")
-    recipes = createRecipes(recipeMetaDict, "data/mixfielddata.xml")
-    items = createItems("data/itemcat_id.csv", recipes)
-    pass
+def createItemRecipe(recipeMetaPath, recipePath, itemCatPath):
+    recipeMetaDict = createRMetaDict(recipeMetaPath)
+    recipes = createRecipes(recipeMetaDict, recipePath)
+    return createItems(itemCatPath, recipes)
