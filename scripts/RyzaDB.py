@@ -31,50 +31,55 @@ class RyzaDB:
     def writeItemRecipes(self, itemRecipes, itemEnums):
         with self.driver.session() as session:
             for item in itemRecipes:
+                #Create item
                 session.run("CREATE (:Item {string_id:$ID})", ID = item.stringID)
+
+                # #Add categories
                 for category in item.categories:
                     session.run("MATCH (item:Item {string_id:$itemID}),(cat:Category {string_id:$catID}) "
                     "CREATE (item)-[:CATEGORISED_BY]->(cat)"
                     , itemID = item.stringID, catID = itemEnums.englishToID[category])
                 
+                #Add recipe
                 if item.recipe != None:
+                    #Connect synthesis category
                     session.run("MATCH (item:Item {string_id:$itemID}),(synthCat:SynthCat {string_id:$synthCatID}) "
                     "CREATE (item)-[:SYNTH_CATEGORISED_BY]->(synthCat)"
-                    , itemID = item.stringID, synthCatID = item.recipe.meta.synCategory)
+                    , itemID = item.stringID, synthCatID = itemEnums.enumToID[item.recipe.meta.synCategory])
 
-                    nodeNo = 0
-                    createNode = ""
-                    createRelationship = ""
+                    #Create nodes
                     def createNodeID(item, nodeNo):
                         return "R" + str(nodeNo) + "_" + item.stringID
-                    for recipeNode in item.recipe:
-                        if recipeNode.itemUsed != 0:
-                            thisNodeID = createNodeID(item.stringID, nodeNo)
+                    createNode = ""
+                    matching = "MATCH (origin:Item {{string_id:{0}}}) ".format(item.stringID)
+                    createRelationship = "CREATE (origin)-[:HAS_RECIPE]->(:RecipeNode {{node_id:{0}}}) ".format(createNodeID(item, 0))
+                    usedItems = set()
+                    for recipeNode in item.recipe.nodes:
+                        if recipeNode.itemUsed != None:
+                            thisNodeID = createNodeID(item, nodeNo)
                             
-                            createNode += "CREATE ({0}:RecipeNode {node_id:{0}}) ".format(thisNodeID)
-                            
-                            createRelationship += "MATCH (item:Item {string_id:{0}}) CREATE ({1})-[:NEEDS_ITEM]->(item)".format(
-                                itemEnums.enumToID(recipeNode.itemUsed), thisNodeID)
+                            createNode += "CREATE ({0}:RecipeNode {{node_id:{0}}}) ".format(thisNodeID)
+                        
+                            #Adding what item the node needs
+                            if recipeNode.itemUsed not in usedItems:
+                                usedItems.add(recipeNode.itemUsed)
+                                matching += "MATCH ({0} {{string_id:{1}}}) ".format(recipeNode.itemUsed, itemEnums.enumToID[recipeNode.itemUsed])
+                            createRelationship += "CREATE ({0})-[:NEEDS]->({1}) ".format(thisNodeID, recipeNode.itemUsed)
 
+                            #Connects the nodes to each other
                             for child in recipeNode.children:
-                                createRelationship += "CREATE ({0})-[:CONNECTS_TO]->({1})".format(thisNodeID, createNodeID(item.stringID, child))
+                                createRelationship += "CREATE ({0})-[:CONNECTS_TO]->({1}) ".format(thisNodeID, createNodeID(item, child))
                             
-                            for unlock in recipeNode.unlock:
-                                if unlock in itemEnums.addCat:
-                                    createRelationship += "MATCH (cat:Category {string_id:{0}}) CREATE ({1})-["
+                            #Adds the category the node unlocks
+                            for synthBoost in recipeNode.synthBoosts:
+                                if synthBoost in itemEnums.addCat:
+                                    matching += "MATCH ({0}:Category {{string_id:{1}}}) ".format(synthBoost, itemEnums.addCat[synthBoost])
+                                    createRelationship += "CREATE ({0})-[:ADDS_CAT]->({1}) ".format(thisNodeID, synthBoost)
                                 else:
-                                    break;
-                                    
-                        nodeNo += 1
-                        # if isFirstNode:
-                        #     createNode += ("MATCH (item:Item {string_id:$itemID}) "
-                        #     "CREATE (item)-[:HAS_RECIPE]->(:RecipeNode {node_id:$nodeID}) "
-                        #     , itemID = item.stringID, nodeID = createNodeID(item.stringID, nodeNo))
-                        #     isFirstNode = False
-                        # else:
-
+                                    break
                     
-
+                    session.run(matching + createNode + createRelationship)
+                    
     def clearDB(self):
         with self.driver.session() as session:
             session.run("MATCH (n) DETACH DELETE n")

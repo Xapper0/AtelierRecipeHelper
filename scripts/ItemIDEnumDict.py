@@ -15,5 +15,5 @@ def createItemIDEnumDict(dictPath):
             itemIDEnumDict.enumToID[row[0]] = row[2]
             if row[0].startswith("ITEM_EFF_ADD_CATEGORY"):
                 #easiest way for me to connect the add categories to the string id of what they add
-                itemIDEnumDict.addCat[row[0]] = itemIDEnumDict.englishToID[row[1][:len("Add ")]] 
+                itemIDEnumDict.addCat[row[0]] = itemIDEnumDict.englishToID[row[1][len("Add "):]] 
     return itemIDEnumDict

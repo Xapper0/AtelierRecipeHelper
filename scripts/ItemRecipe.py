@@ -34,6 +34,7 @@ UNLOCK_CONNECT = "idx"
 BOOST = "Param"
 BOOST_COST = "e"
 BOOST_EFFECT = "v"
+DLC = "ITEM_DLC"
 
 #The information about the recipe
 class RecipeMeta:
@@ -70,7 +71,7 @@ class SynthBoost:
 class Recipe:
     def __init__(self, recipeMeta):
         self.meta = recipeMeta
-        self.nodes = []
+        self.nodes = {}
 
 class Item:
     def __init__(self, stringID, categories, recipe):
@@ -129,7 +130,7 @@ def getEffects(itemAttrib):
             effectList.append(None)
     return effectList
 
-def createRecipes(recipeMetaDict, recipePath):
+def createRecipes(recipeMetaDict, recipePath, allowDLC = False):
     xmlp = ET.XMLParser(encoding='utf-8')
     tree = ET.parse(recipePath, parser=xmlp)
     root = tree.getroot()
@@ -147,28 +148,28 @@ def createRecipes(recipeMetaDict, recipePath):
             print("Expected:", RECIPE_TAG, "got:", recipeData)
             continue
         
-        firstNode = True
-
+        nodeNo = -1
         for node in recipeData:
+            nodeNo += 1
             synthNode = SynthNode()
-            recipe.nodes.append(synthNode)
+            # recipe.nodes.append(synthNode)
             
             if len(node.attrib) < 3:
                 continue
 
-            if not firstNode: #Getting the unlock conditions
+            if nodeNo != 0: #Getting the unlock conditions
                 unlockInfo = node.find(UNLOCK)
                 if unlockInfo == None or unlockInfo.get(UNLOCK_CONNECT) == None:
                     continue
                 elif recipeData.attrib.get(UNLOCK_COST) != None:
                     synthNode.unlock = SynthUnlock(tag.attrib[UNLOCK_COST], tag.attrib[ELEMENT])
-            else:
-                firstNode = False
 
             if ITEM_USED in node.attrib:
                 synthNode.itemUsed = recipe.meta.matsUsed[int(node.attrib[ITEM_USED])]
             else:
                 synthNode.itemUsed = node.attrib[EXTRA_ITEM_USED]
+                if not allowDLC and synthNode.itemUsed.startswith(DLC):
+                    continue
 
             for tag in node:
                 if tag.tag == CHILDREN:
@@ -183,40 +184,11 @@ def createRecipes(recipeMetaDict, recipePath):
                         boostCost = tag.attrib[BOOST_COST + str(i)]
                         boostElem = node.attrib[ELEMENT]
                         boostEffect = BOOST_EFFECT + str(i)
-                        boostName = ""
-
-                        if boostType >= 0 and boostType <= 3: #adds effect
-                            boostName = recipe.meta.effects[boostType][int(tag.attrib[boostEffect])]
-                        elif boostType == 4: #adds quality
-                            boostName = "Quality +" +  tag.attrib[boostEffect]
-                        elif boostType == 5: #adds trait
-                            boostName = "Trait Up"
-                        elif boostType == 6: #adds recipe
-                            boostName = tag.attrib[boostEffect][len("ITEM_RECIPE_"):]
-                        elif boostType == 7: #lowers level
-                            boostName = "Level -" + tag.attrib[boostEffect]
-                        elif boostType == 8: #lowers CC cost
-                            boostName = "CC -" + tag.attrib[boostEffect]
-                        elif boostType == 9: #Increases HP
-                            boostName = "HP + " + tag.attrib[boostEffect]
-                        elif boostType == 11: #Increases attack
-                            boostName = "ATK + " + tag.attrib[boostEffect]
-                        elif boostType == 12: #Increases defense
-                            boostName = "DEF + " + tag.attrib[boostEffect]
-                        elif boostType == 13: #Increases speed
-                            boostName = "SPD + " + tag.attrib[boostEffect]
-                        elif boostType == 14: #Increase role Offense level
-                            boostName = "Offense LV. + " + tag.attrib[boostEffect]
-                        elif boostType == 15: #Increase role Defense level
-                            boostName = "Defense LV. + " + tag.attrib[boostEffect]
-                        elif boostType == 16: #Increase role Support level
-                            boostName = "Support LV. + " + tag.attrib[boostEffect]
-                        else:
-                            print("Unexpected boostType:",boostType)
+                        boostName = getBoostName(boostType, boostEffect, recipe, tag)
 
                         synthNode.synthBoosts.append(SynthBoost(boostCost, boostElem, boostName))
                         i += 1
-
+            recipe.nodes[nodeNo] = synthNode
     return recipes
 
 def createItems(itemPath, recipes):
@@ -233,6 +205,37 @@ def createItems(itemPath, recipes):
                         break
                 items.append(Item(item[5], categories, recipes.get(item[5])))
     return items
+
+def getBoostName(boostType, boostEffect, recipe, tag):
+    if boostType >= 0 and boostType <= 3: #adds effect
+        return recipe.meta.effects[boostType][int(tag.attrib[boostEffect])]
+    elif boostType == 4: #adds quality
+        return "Quality +" +  tag.attrib[boostEffect]
+    elif boostType == 5: #adds trait
+        return "Trait Up"
+    elif boostType == 6: #adds recipe
+        return tag.attrib[boostEffect][len("ITEM_RECIPE_"):]
+    elif boostType == 7: #lowers level
+        return "Level -" + tag.attrib[boostEffect]
+    elif boostType == 8: #lowers CC cost
+        return "CC -" + tag.attrib[boostEffect]
+    elif boostType == 9: #Increases HP
+        return "HP + " + tag.attrib[boostEffect]
+    elif boostType == 11: #Increases attack
+        return "ATK + " + tag.attrib[boostEffect]
+    elif boostType == 12: #Increases defense
+        return "DEF + " + tag.attrib[boostEffect]
+    elif boostType == 13: #Increases speed
+        return "SPD + " + tag.attrib[boostEffect]
+    elif boostType == 14: #Increase role Offense level
+        return "Offense LV. + " + tag.attrib[boostEffect]
+    elif boostType == 15: #Increase role Defense level
+        return "Defense LV. + " + tag.attrib[boostEffect]
+    elif boostType == 16: #Increase role Support level
+        return "Support LV. + " + tag.attrib[boostEffect]
+    else:
+        print("Unexpected boostType:",boostType)
+        return ""
 
 def createItemRecipe(recipeMetaPath, recipePath, itemCatPath):
     recipeMetaDict = createRMetaDict(recipeMetaPath)
