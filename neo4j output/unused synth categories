@@ -1,0 +1,24 @@
+﻿[
+  {
+    "n": {
+      "identity": 560,
+      "labels": [
+        "SynthCat"
+      ],
+      "properties": {
+        "string_id": "6753596"
+      }
+    }
+  },
+  {
+    "n": {
+      "identity": 561,
+      "labels": [
+        "SynthCat"
+      ],
+      "properties": {
+        "string_id": "6753597"
+      }
+    }
+  }
+]

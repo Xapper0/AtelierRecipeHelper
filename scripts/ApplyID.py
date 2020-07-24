@@ -2,6 +2,7 @@ import csv
 import sys
 import xml.etree.ElementTree as ET
 import glob
+import StringIDToLang
 from enum import Enum
 
 STRING_ID = "String_No"
@@ -30,35 +31,39 @@ def joinXMLToCSV(pathPattern, writePath):
                 row.append((item.find(".").attrib[TRANSLATION]).encode("ascii", errors="ignore").decode())
                 writer.writerow(row)
 
-def applyID(startNumber, enumsPath):
-    with open(enumsPath) as enumsFile, open(enumsPath[:-4] + "_id.csv", mode="w") as writeFile:
+def applyID(startNo, idJumps, enumsPath):
+    with open(enumsPath) as enumsFile, open(enumsPath[:-4] + "_id2.csv", mode="w") as writeFile:
         reader = csv.reader(enumsFile)
         writer = csv.writer(writeFile, lineterminator="\n")
+
         for row in reader:
-            row.append(startNumber)
+            if row[0] in idJumps:
+                startNo = idJumps[row[0]]
+            row.append(startNo)
             writer.writerow(row)
-            startNumber = startNumber + 1
+            startNo = startNo + 1
 
-def testIDs(enumsPath, translatedPath):
-    # Creating dictionary
-    translationDictionary = {}
-
-    with open(translatedPath) as translatedFile:
-        translated = csv.reader(translatedFile)
-        for row in translated:
-            translationDictionary[row[0].encode("ascii", errors="ignore").decode()] = row[1]
-
+def testIDs(enumsPath, translationDictionary):
     with open(enumsPath) as enumsFile:
         reader = csv.reader(enumsFile)
         for row in reader:
             if row[1] == "":
                 continue
-            
-            if row[2] in translationDictionary and row[1] != translationDictionary.get(row[2]):
-                print(row, "Does not have the right id", translationDictionary.get(row[0]))
-                
+            if row[2] not in translationDictionary:
+                print(row, "Does not exist in the dictionary")
+                break
+            elif row[1] != translationDictionary.get(row[2]):
+                print(row, "Does not have the right id", translationDictionary.get(row[0]))              
 
 if __name__ == "__main__":
-    # applyID(6750209, "data/ryza_enums.csv")
+    idJumps = {
+        "ITEM_CATEGORY_LIQUID":6815745,
+        "ITEM_EFF_DAMAGE_UNI_1":6881281,
+        "ITEM_POTENTIAL_QUALITY_UP_01":6946817,
+        "MONSTER_PUNI_00":19791873,
+        "ITEM_KIND_MATERIAL":7012353
+    }
+    applyID(6750209, idJumps, "data/ryza_enums.csv")
     # applyID(6750209, "data/itemcat.csv")
-    # testIDs("data/ryza_enums_id.csv", "data/str_item.csv")
+    stringIDToLang = StringIDToLang.createStringIDToLang("data/strcombineall.xml")
+    testIDs("data/ryza_enums_id2.csv", stringIDToLang)

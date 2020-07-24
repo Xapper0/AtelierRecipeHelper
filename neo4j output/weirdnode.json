@@ -1,0 +1,18 @@
+﻿[
+  {
+    "n": {
+      "identity": 172,
+      "labels": [],
+      "properties": {}
+    },
+    "o": {
+      "identity": 164,
+      "labels": [
+        "RecipeNode"
+      ],
+      "properties": {
+        "node_id": "R4_6750575"
+      }
+    }
+  }
+]

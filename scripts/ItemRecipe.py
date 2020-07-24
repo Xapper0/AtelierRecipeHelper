@@ -6,6 +6,12 @@ from pprint import pprint
 itemIDEnumDict = ItemIDEnumDict.createItemIDEnumDict("data/ryza_enums_id.csv")
 
 MAX_EFFECT_COUNT = 4
+MAX_CAT_COUNT = 4
+
+#Attribute names for the item data
+NAME_ID = "nameID"
+CATEGORY = "cat_"
+ITEM_TYPE = "kindTag"
 
 #Attribute names for the meta data
 NEW_ITEM = "ItemTag"
@@ -49,7 +55,7 @@ class RecipeMeta:
         self.startEffects = []
 
 #The synthesis node
-class SynthNode:
+class RecipeNode:
     def __init__(self):
         self.itemUsed = None #The item used in the synthesis
         self.children = []
@@ -74,9 +80,10 @@ class Recipe:
         self.nodes = {}
 
 class Item:
-    def __init__(self, stringID, categories, recipe):
+    def __init__(self, stringID, categories, itemType, recipe):
         self.stringID = stringID
         self.categories = categories
+        self.itemType = itemType
         self.recipe = recipe
 
 #Creates a dictionary of Recipe Meta
@@ -137,9 +144,10 @@ def createRecipes(recipeMetaDict, recipePath, allowDLC = False):
 
     recipes = {}
 
+    #Should be refactored
     for recipeData in root:
         if recipeData.attrib[RECIPE_NAME] not in itemIDEnumDict.enumToID: #Some items aren't in the enums file
-            print(recipeData.attrib[RECIPE_NAME], "not found")
+            print(recipeData.attrib[RECIPE_NAME], "not found in enums")
             continue
         recipe = Recipe(recipeMetaDict[recipeData.attrib[RECIPE_NAME]])
         recipes[itemIDEnumDict.enumToID[recipeData.attrib[RECIPE_NAME]]] = recipe
@@ -151,8 +159,7 @@ def createRecipes(recipeMetaDict, recipePath, allowDLC = False):
         nodeNo = -1
         for node in recipeData:
             nodeNo += 1
-            synthNode = SynthNode()
-            # recipe.nodes.append(synthNode)
+            recipeNode = RecipeNode()
             
             if len(node.attrib) < 3:
                 continue
@@ -161,21 +168,21 @@ def createRecipes(recipeMetaDict, recipePath, allowDLC = False):
                 unlockInfo = node.find(UNLOCK)
                 if unlockInfo == None or unlockInfo.get(UNLOCK_CONNECT) == None:
                     continue
-                elif recipeData.attrib.get(UNLOCK_COST) != None:
-                    synthNode.unlock = SynthUnlock(tag.attrib[UNLOCK_COST], tag.attrib[ELEMENT])
+                elif unlockInfo.attrib.get(UNLOCK_COST) != None:
+                    recipeNode.unlock = SynthUnlock(unlockInfo.attrib[UNLOCK_COST], unlockInfo.attrib[ELEMENT])
 
             if ITEM_USED in node.attrib:
-                synthNode.itemUsed = recipe.meta.matsUsed[int(node.attrib[ITEM_USED])]
+                recipeNode.itemUsed = recipe.meta.matsUsed[int(node.attrib[ITEM_USED])]
             else:
-                synthNode.itemUsed = node.attrib[EXTRA_ITEM_USED]
-                if not allowDLC and synthNode.itemUsed.startswith(DLC):
+                recipeNode.itemUsed = node.attrib[EXTRA_ITEM_USED]
+                if not allowDLC and recipeNode.itemUsed.startswith(DLC):
                     continue
 
             for tag in node:
                 if tag.tag == CHILDREN:
                     childrenString = tag.attrib[CHILDREN_STRING][:-1] #There is an extra comma at the end so it is removed
                     children = childrenString.split(",")
-                    synthNode.children = list(filter(("-1").__ne__, children))
+                    recipeNode.children = list(filter(("-1").__ne__, children))
 
                 elif tag.tag == BOOST:    
                     boostType = int(node.attrib[BOOST_TYPE])
@@ -186,24 +193,28 @@ def createRecipes(recipeMetaDict, recipePath, allowDLC = False):
                         boostEffect = BOOST_EFFECT + str(i)
                         boostName = getBoostName(boostType, boostEffect, recipe, tag)
 
-                        synthNode.synthBoosts.append(SynthBoost(boostCost, boostElem, boostName))
+                        recipeNode.synthBoosts.append(SynthBoost(boostCost, boostElem, boostName))
                         i += 1
-            recipe.nodes[nodeNo] = synthNode
+            recipe.nodes[nodeNo] = recipeNode
     return recipes
 
 def createItems(itemPath, recipes):
-    with open(itemPath) as itemFile:
-        itemCSV = csv.reader(itemFile)
-        items = []
-        for item in itemCSV:
-            if item[0] != "":
-                categories = []
-                for i in range(1,5):
-                    if item[i] != "":
-                        categories.append(item[i])
-                    else:
-                        break
-                items.append(Item(item[5], categories, recipes.get(item[5])))
+    xmlp = ET.XMLParser(encoding='utf-8')
+    tree = ET.parse(itemPath, parser=xmlp)
+    root = tree.getroot()
+    items = []
+    for item in root:
+        if NAME_ID in item.attrib:
+            nameID = item.attrib[NAME_ID]
+            categories = []
+            for i in range(MAX_CAT_COUNT):
+                categoryID = CATEGORY + str(i)
+                if categoryID in item.attrib:
+                    categoryEnum = item.attrib.get(categoryID)
+                    categories.append(itemIDEnumDict.enumToID[categoryEnum])
+                else:
+                    break
+            items.append(Item(nameID, categories, item.attrib[ITEM_TYPE], recipes.get(nameID)))
     return items
 
 def getBoostName(boostType, boostEffect, recipe, tag):
