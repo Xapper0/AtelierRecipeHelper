@@ -32,7 +32,7 @@ def joinXMLToCSV(pathPattern, writePath):
                 writer.writerow(row)
 
 def applyID(startNo, idJumps, enumsPath):
-    with open(enumsPath) as enumsFile, open(enumsPath[:-4] + "_id2.csv", mode="w") as writeFile:
+    with open(enumsPath) as enumsFile, open(enumsPath[:-4] + "_id.csv", mode="w") as writeFile:
         reader = csv.reader(enumsFile)
         writer = csv.writer(writeFile, lineterminator="\n")
 
@@ -66,4 +66,4 @@ if __name__ == "__main__":
     applyID(6750209, idJumps, "data/ryza_enums.csv")
     # applyID(6750209, "data/itemcat.csv")
     stringIDToLang = StringIDToLang.createStringIDToLang("data/strcombineall.xml")
-    testIDs("data/ryza_enums_id2.csv", stringIDToLang)
+    testIDs("data/ryza_enums_id.csv", stringIDToLang)

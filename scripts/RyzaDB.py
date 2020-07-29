@@ -38,7 +38,7 @@ class RyzaDB:
 
                 # #Add categories
                 for category in item.categories:
-                    session.run("MATCH (item:Item {string_id:$itemID}),(cat:Category {string_id:$catID}) "
+                    session.run("MATCH (item:Item {string_id:$itemID}), (cat:Category {string_id:$catID}) "
                     "CREATE (item)-[:CATEGORISED_BY]->(cat)"
                     , itemID = item.stringID, catID = category)
 
@@ -46,9 +46,12 @@ class RyzaDB:
             for item in itemRecipes:
                 if item.recipe != None:
                     #Connect synthesis category
+                    synthCatEnum = item.itemType
+                    if synthCatEnum == "ITEM_KIND_FIELD": #Replacing the gathering item tag with the synthesis tag since it is functionally the same
+                        synthCatEnum = "ITEM_KIND_MIX"
                     session.run("MATCH (item:Item {string_id:$itemID}),(synthCat:SynthCat {string_id:$synthCatID}) "
                     "CREATE (item)-[:SYNTH_CATEGORISED_BY]->(synthCat)"
-                    , itemID = item.stringID, synthCatID = itemEnums.enumToID[item.itemType])
+                    , itemID = item.stringID, synthCatID = itemEnums.enumToID[synthCatEnum])
 
                     #Create nodes
                     def createNodeID(item, nodeNo):
@@ -102,7 +105,8 @@ class RyzaDB:
         self.writeElements()
         categoryIDs = [string_id for enum, string_id in itemEnumDict.enumToID.items() if enum.startswith("ITEM_CATEGORY")]
         self.writeCats(categoryIDs)
-        synthCatIDs =  [string_id for enum, string_id in itemEnumDict.enumToID.items() if enum.startswith("MIX_RECIPE_CATEGORY_")]
+        unusedSynthCats = ["ITEM_KIND_EXPENDABLE", "ITEM_KIND_MATERIAL", "ITEM_KIND_CORE", "ITEM_KIND_SUPPORT", "ITEM_KIND_BOOK", "ITEM_KIND_FIELD"]
+        synthCatIDs =  [string_id for enum, string_id in itemEnumDict.enumToID.items() if enum.startswith("ITEM_KIND_") and enum not in unusedSynthCats]
         self.writeSynthCats(synthCatIDs)
 
         self.writeItemRecipes(itemRecipes, itemEnumDict)
@@ -121,12 +125,12 @@ class RyzaDB:
             
 
 if __name__ == "__main__":
-    ryzaDB = RyzaDB("bolt://localhost:7687", "neo4j", "1")
+    ryzaDB = RyzaDB("bolt://35.174.211.189:33708", "neo4j", "flare-tools-ovens")
 
     itemrecipedata = "data/itemrecipedata.xml"
     mixfielddata = "data/mixfielddata.xml"
     itemCategoriesID = "data/itemdata_no.xml"
-    dictPath = "data/ryza_enums_id2.csv"
+    dictPath = "data/ryza_enums_id.csv"
 
     itemRecipes = ItemRecipe.createItemRecipe(itemrecipedata, mixfielddata, itemCategoriesID)
     itemEnumDict = ItemIDEnumDict.createItemIDEnumDict(dictPath)
