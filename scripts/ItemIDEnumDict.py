@@ -7,6 +7,14 @@ class ItemIDEnumDict:
         self.addCat = {}
 
 def createItemIDEnumDict(dictPath):
+    """Creates the different dictionaries used to match values to another
+
+    Args:
+        dictPath (str): the path to the file containing string ids, English name and enum
+
+    Returns:
+        ItemIDEnumDict: the dictionaries used
+    """
     itemIDEnumDict = ItemIDEnumDict()
     with open(dictPath) as dictFile:
         dictCSV = csv.reader(dictFile)
