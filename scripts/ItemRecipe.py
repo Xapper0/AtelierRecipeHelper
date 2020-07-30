@@ -62,23 +62,26 @@ class RecipeNode:
         self.unlock = None #The unlock requirements of the node (if any)
         self.synthBoosts = []
 
-#
+#Data involved in unlocking the node
 class SynthUnlock:
     def __init__(self, cost, element):
         self.cost = cost
         self.element = element
 
+#What boost the node gives to the item
 class SynthBoost:
     def __init__(self, cost, element, name):
         self.cost = cost
         self.element = element
         self.name = name
 
+#The recipe itself
 class Recipe:
     def __init__(self, recipeMeta):
         self.meta = recipeMeta
         self.nodes = {}
 
+#What the item involves
 class Item:
     def __init__(self, stringID, categories, itemType, recipe):
         self.stringID = stringID
@@ -86,8 +89,15 @@ class Item:
         self.itemType = itemType
         self.recipe = recipe
 
-#Creates a dictionary of Recipe Meta
 def createRMetaDict(metaPath):
+    """Creates a dictionary of Recipe Meta from enum to the RecipeMeta
+
+    Args:
+        metaPath (str): Path to the recipe meta data
+
+    Returns:
+        dict of str : RecipeMeta: dictionary from enum to RecipeMeta
+    """
     xmlp = ET.XMLParser(encoding='utf-8')
     tree = ET.parse(metaPath, parser=xmlp)
     root = tree.getroot()
@@ -126,8 +136,15 @@ def createRMetaDict(metaPath):
 
     return recipeMetaDict
 
-#Gets the effects and appends them into an array
 def getEffects(itemAttrib):
+    """Gets the effects and appends them into an list
+
+    Args:
+        itemAttrib (dict of str:str): the effects of the item
+
+    Returns:
+        list of str: the effects of the item
+    """
     effectList = []
     for effectNo in range(MAX_EFFECT_COUNT):
         addEff = EFFECT + str(effectNo)
@@ -138,6 +155,16 @@ def getEffects(itemAttrib):
     return effectList
 
 def createRecipes(recipeMetaDict, recipePath, allowDLC = False):
+    """Creates the recipes of an item
+
+    Args:
+        recipeMetaDict (dict of str : RecipeMeta): A recipe meta dictionary
+        recipePath (str): The path to where the recipes are stored
+        allowDLC (bool, optional): Whether or not to allow DLCs. Defaults to False.
+
+    Returns:
+        dict of str to Recipe: A dictionary of enums to the recipe
+    """
     xmlp = ET.XMLParser(encoding='utf-8')
     tree = ET.parse(recipePath, parser=xmlp)
     root = tree.getroot()
@@ -146,13 +173,16 @@ def createRecipes(recipeMetaDict, recipePath, allowDLC = False):
 
     #Should be refactored
     for recipeData in root:
-        if recipeData.attrib[RECIPE_NAME] not in itemIDEnumDict.enumToID: #Some items aren't in the enums file
-            print(recipeData.attrib[RECIPE_NAME], "not found in enums")
+        recipeName = recipeData.attrib[RECIPE_NAME]
+
+        if recipeName not in itemIDEnumDict.enumToID: #Some items aren't in the enums file
+            print(recipeName, "not found in enums")
             continue
-        recipe = Recipe(recipeMetaDict[recipeData.attrib[RECIPE_NAME]])
-        recipes[itemIDEnumDict.enumToID[recipeData.attrib[RECIPE_NAME]]] = recipe
+
+        recipe = Recipe(recipeMetaDict[recipeName])
+        recipes[itemIDEnumDict.enumToID[recipeName]] = recipe
         
-        if recipeData.tag != RECIPE_TAG:
+        if recipeData.tag != RECIPE_TAG: #Used to check that the right recipe was gotten
             print("Expected:", RECIPE_TAG, "got:", recipeData)
             continue
         
@@ -160,38 +190,40 @@ def createRecipes(recipeMetaDict, recipePath, allowDLC = False):
         for node in recipeData:
             nodeNo += 1
             recipeNode = RecipeNode()
-            
-            if len(node.attrib) < 3:
-                continue
 
-            if nodeNo != 0: #Getting the unlock conditions
+            #Getting the unlock conditions and what connects to the node
+            if nodeNo != 0: 
                 unlockInfo = node.find(UNLOCK)
-                if unlockInfo == None or unlockInfo.get(UNLOCK_CONNECT) == None:
+                if unlockInfo == None or unlockInfo.get(UNLOCK_CONNECT) == None: 
+                    #Nothing connects to the node so is invalid
                     continue
                 elif unlockInfo.attrib.get(UNLOCK_COST) != None:
                     recipeNode.unlock = SynthUnlock(unlockInfo.attrib[UNLOCK_COST], unlockInfo.attrib[ELEMENT])
 
+            #Getting the item or category used in the node
             if ITEM_USED in node.attrib:
                 recipeNode.itemUsed = recipe.meta.matsUsed[int(node.attrib[ITEM_USED])]
             else:
                 recipeNode.itemUsed = node.attrib[EXTRA_ITEM_USED]
                 if not allowDLC and recipeNode.itemUsed.startswith(DLC):
+                    #The node requires a DLC only item, so is skipped
                     continue
 
-            for tag in node:
-                if tag.tag == CHILDREN:
-                    childrenString = tag.attrib[CHILDREN_STRING][:-1] #There is an extra comma at the end so it is removed
+            for element in node:
+                #Gets the children of the node
+                if element.tag == CHILDREN:
+                    childrenString = element.attrib[CHILDREN_STRING][:-1] #There is an extra comma at the end so it is removed
                     children = childrenString.split(",")
                     recipeNode.children = list(filter(("-1").__ne__, children))
-
-                elif tag.tag == BOOST:    
+                #Getting the effects and other boosts from the node
+                elif element.tag == BOOST:    
                     boostType = int(node.attrib[BOOST_TYPE])
                     i = 0
-                    while (BOOST_COST + str(i)) in tag.attrib:
-                        boostCost = tag.attrib[BOOST_COST + str(i)]
+                    while (BOOST_COST + str(i)) in element.attrib:
+                        boostCost = element.attrib[BOOST_COST + str(i)]
                         boostElem = node.attrib[ELEMENT]
-                        boostEffect = BOOST_EFFECT + str(i)
-                        boostName = getBoostName(boostType, boostEffect, recipe, tag)
+                        boostEffectTag = BOOST_EFFECT + str(i)
+                        boostName = getBoostName(boostType, element.attrib[boostEffectTag], recipe)
 
                         recipeNode.synthBoosts.append(SynthBoost(boostCost, boostElem, boostName))
                         i += 1
@@ -199,6 +231,15 @@ def createRecipes(recipeMetaDict, recipePath, allowDLC = False):
     return recipes
 
 def createItems(itemPath, recipes):
+    """Creates the items and applies the recipes to them (if applicable)
+
+    Args:
+        itemPath (str): the path to where the items are stored
+        recipes (dict of str : Recipe): the recipes to attach to the items
+
+    Returns:
+        [list of Item]: The items in the file
+    """
     xmlp = ET.XMLParser(encoding='utf-8')
     tree = ET.parse(itemPath, parser=xmlp)
     root = tree.getroot()
@@ -206,6 +247,8 @@ def createItems(itemPath, recipes):
     for item in root:
         if NAME_ID in item.attrib:
             nameID = item.attrib[NAME_ID]
+
+            #Getting the categories
             categories = []
             for i in range(MAX_CAT_COUNT):
                 categoryID = CATEGORY + str(i)
@@ -217,38 +260,58 @@ def createItems(itemPath, recipes):
             items.append(Item(nameID, categories, item.attrib[ITEM_TYPE], recipes.get(nameID)))
     return items
 
-def getBoostName(boostType, boostEffect, recipe, tag):
+def getBoostName(boostType, boostEffect, recipe):
+    """Gets the name of the boost
+
+    Args:
+        boostType (int): The type of the boost as a number
+        boostEffect (str): The effect of the boost
+        recipe (Recipe): The recipe of the item of the boost
+
+    Returns:
+        str: The name of the boost
+    """
     if boostType >= 0 and boostType <= 3: #adds effect
-        return recipe.meta.effects[boostType][int(tag.attrib[boostEffect])]
+        return recipe.meta.effects[boostType][int(boostEffect)]
     elif boostType == 4: #adds quality
-        return "Quality +" +  tag.attrib[boostEffect]
+        return "Quality +" +  boostEffect
     elif boostType == 5: #adds trait
         return "Trait Up"
     elif boostType == 6: #adds recipe
-        return tag.attrib[boostEffect][len("ITEM_RECIPE_"):]
+        return boostEffect[len("ITEM_RECIPE_"):]
     elif boostType == 7: #lowers level
-        return "Level -" + tag.attrib[boostEffect]
+        return "Level -" + boostEffect
     elif boostType == 8: #lowers CC cost
-        return "CC -" + tag.attrib[boostEffect]
+        return "CC -" + boostEffect
     elif boostType == 9: #Increases HP
-        return "HP + " + tag.attrib[boostEffect]
+        return "HP + " + boostEffect
     elif boostType == 11: #Increases attack
-        return "ATK + " + tag.attrib[boostEffect]
+        return "ATK + " + boostEffect
     elif boostType == 12: #Increases defense
-        return "DEF + " + tag.attrib[boostEffect]
+        return "DEF + " + boostEffect
     elif boostType == 13: #Increases speed
-        return "SPD + " + tag.attrib[boostEffect]
+        return "SPD + " + boostEffect
     elif boostType == 14: #Increase role Offense level
-        return "Offense LV. + " + tag.attrib[boostEffect]
+        return "Offense LV. + " + boostEffect
     elif boostType == 15: #Increase role Defense level
-        return "Defense LV. + " + tag.attrib[boostEffect]
+        return "Defense LV. + " + boostEffect
     elif boostType == 16: #Increase role Support level
-        return "Support LV. + " + tag.attrib[boostEffect]
+        return "Support LV. + " + boostEffect
     else:
         print("Unexpected boostType:",boostType)
         return ""
 
 def createItemRecipe(recipeMetaPath, recipePath, itemCatPath):
+    """Creates Items with their recipes
+
+    Args:
+        recipeMetaPath (str): Path to the recipe meta data
+        recipePath (str): Path to the recipe data
+        itemCatPath (str): Path to the item category data
+
+    Returns:
+        [list of Item]: The items in the file
+    """
     recipeMetaDict = createRMetaDict(recipeMetaPath)
     recipes = createRecipes(recipeMetaDict, recipePath)
     return createItems(itemCatPath, recipes)

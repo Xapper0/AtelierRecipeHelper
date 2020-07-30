@@ -13,6 +13,8 @@ class RyzaDB:
         self.driver.close()
     
     def writeElements(self):
+        """Writes the elements to the database
+        """
         with self.driver.session() as session:
             session.run("CREATE (:Element {string_id:'4063340', element_id:0}) " #fire
                         "CREATE (:Element {string_id:'4063341', element_id:1}) " #ice
@@ -20,17 +22,38 @@ class RyzaDB:
                         "CREATE (:Element {string_id:'4063343', element_id:3}) ")#wind
     
     def writeCats(self, categoryIDs):
+        """Writes the categories to the database
+
+        Args:
+            categoryIDs (list of str): list of category ids
+        """
         with self.driver.session() as session:
             for ID in categoryIDs:
                 session.run("CREATE (:Category {string_id:$ID})", ID = ID)
 
     def writeSynthCats(self, synthCatIDs):
+        """Writes the synthesis categories to the database
+
+        Args:
+            synthCatIDs (list of str): list of synthesis category ids 
+        """
         with self.driver.session() as session:
             for ID in synthCatIDs:
                 session.run("CREATE (:SynthCat {string_id:$ID})", ID = ID)
 
     #Should be split to smaller methods
     def writeItemRecipes(self, itemRecipes, itemEnums):
+        """Writes the item recipes to the database
+
+        Args:
+            itemRecipes (list of Item): The items to add to the database
+            itemEnums (ItemIDEnumDict): The dictionaries used to convert enums and ids
+        """
+        
+        self.writeItems(itemRecipes)
+        self.writeRecipes(itemRecipes, itemEnums)
+    
+    def writeItems(self, itemRecipes):
         with self.driver.session() as session:
             for item in itemRecipes:
                 #Create item
@@ -42,7 +65,8 @@ class RyzaDB:
                     "CREATE (item)-[:CATEGORISED_BY]->(cat)"
                     , itemID = item.stringID, catID = category)
 
-            #Add recipe
+    def writeRecipes(self, itemRecipes, itemEnums):
+        with self.driver.session() as session:
             for item in itemRecipes:
                 if item.recipe != None:
                     #Connect synthesis category
@@ -94,7 +118,7 @@ class RyzaDB:
                                     break
                     session.run(matching + createNode + createRelationship)
                     print("Added",item.recipe.meta.recipeName)
-    
+
     def clearDB(self):
         with self.driver.session() as session:
             session.run("MATCH (n) DETACH DELETE n")
